@@ -30,7 +30,7 @@ sub new {
 	$self->{'file'} = undef;
 
 	# Type of path.
-	$self->{'type'} = 'file';
+	$self->{'type'} = 'dir';
 
 	# Process parameters.
 	set_params($self, @params);
