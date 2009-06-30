@@ -9,7 +9,7 @@ use warnings;
 # Modules.
 use Error::Simple::Multiple qw(err);
 use FindBin qw($Bin $Script);
-use File::Spec::Functions qw(catfile rel2abs splitdir splitpath);
+use File::Spec::Functions qw(catfile rel2abs splitdir);
 use File::Object::Utils qw(set_params);
 
 # Version.
@@ -45,10 +45,10 @@ sub new {
 	# Path.
 	if ($self->{'type'} eq 'file') {
 		if ($self->{'file'}) {
-			$self->{'path'} = [splitpath($self->{'file'})];
+			$self->{'path'} = [splitdir($self->{'file'})];
 		} else {
 			my $file_abs_path = rel2abs($Script);
-			$self->{'path'} = [splitpath($file_abs_path)];
+			$self->{'path'} = [splitdir($file_abs_path)];
 		}
 	} else {
 		if ($self->{'dir'}) {
@@ -68,6 +68,29 @@ sub serialize {
 
 	my $self = shift;
 	return catfile(@{$self->{'path'}});
+}
+
+#------------------------------------------------------------------------------
+sub up {
+#------------------------------------------------------------------------------
+# Go to parent directory.
+
+	my $self = shift;
+	if ($self->{'type'} eq 'file') {
+		if (@{$self->{'path'}} > 1) {
+			$self->{'type'} = 'dir';
+			splice @{$self->{'path'}}, -2;
+		} else {
+			err 'Cannot go up.', 'PATH', $self->serialize;
+		}
+	} else {
+		if (@{$self->{'path'}}) {
+			pop @{$self->{'path'}};
+		} else {
+			err 'Cannot go up.', 'PATH', $self->serialize;
+		}
+	}
+	return $self;
 }
 
 1;
