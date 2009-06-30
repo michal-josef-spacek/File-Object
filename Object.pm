@@ -58,6 +58,7 @@ sub new {
 		}
 	}
 
+	# Object.
 	return $self;
 }
 
@@ -72,6 +73,8 @@ sub dir {
 		pop @{$self->{'path'}};
 	}
 	push @{$self->{'path'}}, $dir;
+
+	# Object.
 	return $self;
 }
 
@@ -87,6 +90,8 @@ sub file {
 		push @{$self->{'path'}}, $file;
 		$self->{'type'} = 'file';
 	}
+
+	# Object.
 	return $self;
 }
 
@@ -104,21 +109,32 @@ sub up {
 #------------------------------------------------------------------------------
 # Go to parent directory.
 
-	my $self = shift;
-	if ($self->{'type'} eq 'file') {
-		if (@{$self->{'path'}} > 1) {
-			$self->{'type'} = 'dir';
-			splice @{$self->{'path'}}, -2;
+	my ($self, $up_num) = @_;
+
+	# Check number and positive number.
+	if (! $up_num || $up_num !~ /^\d$/ || $up_num < 1) {
+		$up_num = 1;
+	}
+
+	# Process.
+	foreach (1 .. $up_num) {
+		if ($self->{'type'} eq 'file') {
+			if (@{$self->{'path'}} > 1) {
+				$self->{'type'} = 'dir';
+				splice @{$self->{'path'}}, -2;
+			} else {
+				err 'Cannot go up.', 'PATH', $self->serialize;
+			}
 		} else {
-			err 'Cannot go up.', 'PATH', $self->serialize;
-		}
-	} else {
-		if (@{$self->{'path'}}) {
-			pop @{$self->{'path'}};
-		} else {
-			err 'Cannot go up.', 'PATH', $self->serialize;
+			if (@{$self->{'path'}}) {
+				pop @{$self->{'path'}};
+			} else {
+				err 'Cannot go up.', 'PATH', $self->serialize;
+			}
 		}
 	}
+
+	# Object.
 	return $self;
 }
 
