@@ -84,12 +84,24 @@ sub file {
 # Add file.
 
 	my ($self, $file) = @_;
-	if ($self->{'type'} eq 'file') {
-		$self->{'path'}->[-1] = $file;
-	} else {
-		push @{$self->{'path'}}, $file;
-		$self->{'type'} = 'file';
-	}
+	$self->_file([$file]);
+
+	# Object.
+	return $self;
+}
+
+#------------------------------------------------------------------------------
+sub file_path {
+#------------------------------------------------------------------------------
+# Add file path.
+
+	my ($self, $file_path) = @_;
+	
+	# Split to parts.
+	my @file = splitdir($file_path);
+
+	# Add to path.
+	$self->_file(\@file);
 
 	# Object.
 	return $self;
@@ -136,6 +148,26 @@ sub up {
 
 	# Object.
 	return $self;
+}
+
+#------------------------------------------------------------------------------
+# Internal subroutines.
+#------------------------------------------------------------------------------
+
+#------------------------------------------------------------------------------
+sub _file {
+#------------------------------------------------------------------------------
+# Add file array.
+
+	my ($self, $file_ar) = @_;
+	if ($self->{'type'} eq 'file') {
+		pop @{$self->{'path'}};
+		push @{$self->{'path'}}, @{$file_ar};
+	} else {
+		push @{$self->{'path'}}, @{$file_ar};
+		$self->{'type'} = 'file';
+	}
+	return;
 }
 
 1;
