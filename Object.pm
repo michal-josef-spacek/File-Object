@@ -7,6 +7,7 @@ use strict;
 use warnings;
 
 # Modules.
+use Error::Simple::Multiple qw(err);
 use FindBin qw($Bin);
 use File::Spec::Functions qw(catfile splitpath);
 use File::Object::Utils qw(set_params);
@@ -40,7 +41,7 @@ sub new {
 	# Path.
 	if ($self->{'dir'}) {
 		$self->{'path'} = splitdir($self->{'dir'});
-	} elsif ($self->{'file') {
+	} elsif ($self->{'file'}) {
 		$self->{'path'} = splitpath($self->{'file'});
 	} else {
 		$self->{'path'} = splitdir($Bin);
