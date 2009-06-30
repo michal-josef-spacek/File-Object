@@ -8,8 +8,8 @@ use warnings;
 
 # Modules.
 use Error::Simple::Multiple qw(err);
-use FindBin qw($Bin);
-use File::Spec::Functions qw(catfile splitpath);
+use FindBin qw($Bin $Script);
+use File::Spec::Functions qw(catfile rel2abs splitdir splitpath);
 use File::Object::Utils qw(set_params);
 
 # Version.
@@ -29,22 +29,33 @@ sub new {
 	# File path.
 	$self->{'file'} = undef;
 
+	# Type of path.
+	$self->{'type'} = 'file';
+
 	# Process parameters.
 	set_params($self, @params);
 
-	# Check to 'dir' and 'file'.
-	if (defined $self->{'dir'} && defined $self->{'file'}) {
-		err 'Cannot use \'dir\' parameter and \'file\' parameter '.
-			'at the same time.';
+	# Check to right 'type'.
+	if (! $self->{'type'} || ($self->{'type'} ne 'file' 
+		&& $self->{'type'} ne 'dir')) {
+
+		err "Bad 'type' parameter.";
 	}
 
 	# Path.
-	if ($self->{'dir'}) {
-		$self->{'path'} = splitdir($self->{'dir'});
-	} elsif ($self->{'file'}) {
-		$self->{'path'} = splitpath($self->{'file'});
+	if ($self->{'type'} eq 'file') {
+		if ($self->{'file'}) {
+			$self->{'path'} = [splitpath($self->{'file'})];
+		} else {
+			my $file_abs_path = rel2abs($Script);
+			$self->{'path'} = [splitpath($file_abs_path)];
+		}
 	} else {
-		$self->{'path'} = splitdir($Bin);
+		if ($self->{'dir'}) {
+			$self->{'path'} = [splitdir($self->{'dir'})];
+		} else {
+			$self->{'path'} = [splitdir($Bin)];
+		}
 	}
 
 	return $self;
