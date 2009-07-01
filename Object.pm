@@ -221,6 +221,46 @@ File::Object - TODO
 
 Constructor.
 
+=over 8
+
+=item * C<dir>
+
+TODO
+
+=item * C<file>
+
+TODO
+
+=item * C<type>
+
+TODO
+
+=back
+
+=item C<dir()>
+
+TODO
+
+=item C<dir_path()>
+
+TODO
+
+=item C<file()>
+
+TODO
+
+=item C<file_path()>
+
+TODO
+
+=item C<serialize()>
+
+TODO
+
+=item C<up()>
+
+TODO
+
 =back
 
 =head1 ERRORS
