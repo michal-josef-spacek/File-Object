@@ -237,19 +237,19 @@ TODO
 
 =back
 
-=item C<dir()>
+=item C<dir($dir)>
 
 TODO
 
-=item C<dir_path()>
+=item C<dir_path($dir_path)>
 
 TODO
 
-=item C<file()>
+=item C<file($file)>
 
 TODO
 
-=item C<file_path()>
+=item C<file_path($file_path)>
 
 TODO
 
@@ -257,7 +257,7 @@ TODO
 
 TODO
 
-=item C<up()>
+=item C<up($up_num)>
 
 TODO
 
@@ -266,14 +266,19 @@ TODO
 =head1 ERRORS
 
  Mine:
-   TODO
+   Bad 'type' parameter.
+   Cannot go up.
+     PATH -> path;
 
  From File::Object::Utils::set_params():
    Unknown parameter '%s'.
 
 =head1 DEPENDENCIES
 
- TODO
+L<Error::Simple::Multiple(3pm)>,
+L<FindBin(3pm)>,
+L<File::Spec::Functions(3pm)>,
+L<File::Object::Utils(3pm)>.
 
 =head1 SEE ALSO
 
