@@ -2,7 +2,9 @@ TODO
 ====
 1. Testy.
 2. Dodelat dokumentaci.
-3.
+3. Slo by nejak zoptimalizovat kod? Se mi zda, ze v konstruktoru
+   by slo volat nejakou pomocnou funkci.
+4.
 
 Applied
 =======
