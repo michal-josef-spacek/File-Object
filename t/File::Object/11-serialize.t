@@ -1,6 +1,6 @@
 # Modules.
-use Cwd qw(cwd);
 use File::Object;
+use FindBin qw($Bin);
 use Test::More 'tests' => 2;
 
 # Debug message.
@@ -9,7 +9,7 @@ print "Testing: serialize() method.\n";
 # Test.
 my $obj = File::Object->new;
 my $ret = $obj->serialize;
-my $rigth_ret = cwd();
+my $rigth_ret = $Bin;
 is($ret, $rigth_ret);
 
 # Test.
