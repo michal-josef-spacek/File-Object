@@ -68,7 +68,11 @@ sub dir {
 # Add dir.
 
 	my ($self, $dir) = @_;
-	$self->_dir([$dir]);
+
+	# Only if is $dir defined.
+	if (defined $dir) {
+		$self->_dir([$dir]);
+	}
 
 	# Object.
 	return $self;
@@ -81,11 +85,15 @@ sub dir_path {
 
 	my ($self, $dir_path) = @_;
 
-	# Split to parts.
-	my @parts = splitdir($dir_path);
+	# Only if is $dir_path defined.
+	if (defined $dir_path) {
 
-	# Add to path.
-	$self->_dir(\@parts);
+		# Split to parts.
+		my @parts = splitdir($dir_path);
+
+		# Add to path.
+		$self->_dir(\@parts);
+	}
 
 	# Object.
 	return $self;
@@ -97,7 +105,11 @@ sub file {
 # Add file.
 
 	my ($self, $file) = @_;
-	$self->_file([$file]);
+
+	# Only if is $file defined.
+	if (defined $file) {
+		$self->_file([$file]);
+	}
 
 	# Object.
 	return $self;
@@ -109,12 +121,16 @@ sub file_path {
 # Add file path.
 
 	my ($self, $file_path) = @_;
-	
-	# Split to parts.
-	my @file = splitdir($file_path);
 
-	# Add to path.
-	$self->_file(\@file);
+	# Only if is $file_path defined.
+	if (defined $file_path) {	
+
+		# Split to parts.
+		my @file = splitdir($file_path);
+
+		# Add to path.
+		$self->_file(\@file);
+	}
 
 	# Object.
 	return $self;
