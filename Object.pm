@@ -9,7 +9,7 @@ use warnings;
 # Modules.
 use Error::Simple::Multiple qw(err);
 use FindBin qw($Bin $Script);
-use File::Spec::Functions qw(catfile rel2abs splitdir);
+use File::Spec::Functions qw(catdir catfile rel2abs splitdir);
 use File::Object::Utils qw(set_params);
 
 # Version.
@@ -152,7 +152,11 @@ sub serialize {
 # Serialize path.
 
 	my $self = shift;
-	return catfile(@{$self->{'path'}});
+	if ($self->{'type'} eq 'dir') {
+		return catdir(@{$self->{'path'}});
+	} else {
+		return catfile(@{$self->{'path'}});
+	}
 }
 
 #------------------------------------------------------------------------------
