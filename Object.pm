@@ -263,7 +263,7 @@ File::Object - TODO
 
 =over 8
 
-=item C<new()>
+=item C<new(%parameters)>
 
 Constructor.
 
@@ -271,15 +271,18 @@ Constructor.
 
 =item * C<dir>
 
-TODO
+ Directory path.
 
 =item * C<file>
 
-TODO
+ File path.
 
 =item * C<type>
 
-TODO
+ Type of path.
+ Types:
+ - file
+ - dir
 
 =back
 
@@ -320,12 +323,12 @@ TODO
 =head1 ERRORS
 
  Mine:
-   Bad 'type' parameter.
-   Cannot go up.
-     PATH -> path;
+         Bad 'type' parameter.
+         Cannot go up.
+                 PATH -> path;
 
  From File::Object::Utils::set_params():
-   Unknown parameter '%s'.
+         Unknown parameter '%s'.
 
 =head1 DEPENDENCIES
 
