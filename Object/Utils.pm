@@ -1,6 +1,4 @@
-#------------------------------------------------------------------------------
 package File::Object::Utils;
-#------------------------------------------------------------------------------
 
 # Pragmas.
 use base qw(Exporter);
@@ -17,11 +15,8 @@ Readonly::Array our @EXPORT_OK => qw(set_params);
 # Version.
 our $VERSION = 0.01;
 
-#------------------------------------------------------------------------------
-sub set_params {
-#------------------------------------------------------------------------------
 # Set parameters to user values.
-
+sub set_params {
 	my ($self, @params) = @_;
 	while (@params) {
 		my $key = shift @params;
