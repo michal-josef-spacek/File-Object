@@ -5,10 +5,10 @@ use strict;
 use warnings;
 
 # Modules.
+use Class::Utils qw(set_params);
 use Error::Simple::Multiple qw(err);
 use FindBin qw($Bin $Script);
 use File::Spec::Functions qw(catdir catfile rel2abs splitdir);
-use File::Object::Utils qw(set_params);
 
 # Version.
 our $VERSION = 0.01;
@@ -16,6 +16,8 @@ our $VERSION = 0.01;
 # Constructor.
 sub new {
 	my ($class, @params) = @_;
+
+	# Create object.
 	my $self = bless {}, $class;
 
 	# Dir path.
@@ -288,15 +290,15 @@ TODO
          Cannot go up.
                  PATH -> path;
 
- From File::Object::Utils::set_params():
+ From Class::Utils::set_params():
          Unknown parameter '%s'.
 
 =head1 DEPENDENCIES
 
+L<Class::Utils(3pm)>,
 L<Error::Simple::Multiple(3pm)>,
 L<FindBin(3pm)>,
-L<File::Spec::Functions(3pm)>,
-L<File::Object::Utils(3pm)>.
+L<File::Spec::Functions(3pm)>.
 
 =head1 SEE ALSO
 
