@@ -14,7 +14,8 @@ is($ret, $rigth_ret);
 
 # Test.
 $obj = File::Object->new(
-	'file' => '1/2/3/ex1.txt',
+	'dir' => [1, 2, 3],
+	'file' => 'ex1.txt',
 	'type' => 'file',
 );
 $ret = $obj->s;

@@ -13,7 +13,7 @@ ok($ret->isa('File::Object'));
 
 # Test.
 $obj = File::Object->new(
-	'dir' => '/1/2',
+	'dir' => ['1', '2'],
 );
 $ret = $obj->get_dir;
 is($ret, '2');
