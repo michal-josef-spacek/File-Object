@@ -61,29 +61,12 @@ sub new {
 
 # Add dir.
 sub dir {
-	my ($self, $dir) = @_;
-
-	# Only if is $dir defined.
-	if (defined $dir) {
-		$self->_dir($dir);
-	}
-
-	# Object.
-	return $self;
-}
-
-# Add dir path.
-sub dir_path {
-	my ($self, $dir_path) = @_;
-
-	# Only if is $dir_path defined.
-	if (defined $dir_path) {
-
-		# Split to parts.
-		my @parts = splitdir($dir_path);
-
-		# Add to path.
-		$self->_dir(@parts);
+	my ($self, @dirs) = @_;
+	# XXX Is this right?
+	foreach my $dir (@dirs) {
+		if (defined $dir) {
+			$self->_dir($dir);
+		}
 	}
 
 	# Object.
@@ -92,34 +75,18 @@ sub dir_path {
 
 # Add file.
 sub file {
-	my ($self, $file) = @_;
-
-	# Only if is $file defined.
-	if (defined $file) {
-		$self->_file($file);
+	my ($self, @dirs_or_file) = @_;
+	# XXX is this right?
+	foreach my $dir (@dirs_or_file) {
+		if (defined $dir) {
+			$self->_dir($dir);
+		}
 	}
 
 	# Object.
 	return $self;
 }
 
-# Add file path.
-sub file_path {
-	my ($self, $file_path) = @_;
-
-	# Only if is $file_path defined.
-	if (defined $file_path) {	
-
-		# Split to parts.
-		my @file = splitdir($file_path);
-
-		# Add to path.
-		$self->_file(@file);
-	}
-
-	# Object.
-	return $self;
-}
 
 # Get dir.
 sub get_dir {
@@ -249,19 +216,11 @@ Constructor.
 
 =back
 
-=item C<dir($dir)>
+=item C<dir(@dir)>
 
 TODO
 
-=item C<dir_path($dir_path)>
-
-TODO
-
-=item C<file($file)>
-
-TODO
-
-=item C<file_path($file_path)>
+=item C<file(@file)>
 
 TODO
 
