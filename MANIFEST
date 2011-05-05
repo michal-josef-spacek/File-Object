@@ -7,8 +7,8 @@ t/File::Object/02-pod_coverage.t
 t/File::Object/03-pod.t
 t/File::Object/04-constructor.t
 t/File::Object/05-dir.t
-t/File::Object/07-file.t
-t/File::Object/09-get_dir.t
-t/File::Object/10-get_file.t
-t/File::Object/11-serialize.t
-t/File::Object/12-up.t
+t/File::Object/06-file.t
+t/File::Object/07-get_dir.t
+t/File::Object/08-get_file.t
+t/File::Object/09-serialize.t
+t/File::Object/10-up.t
