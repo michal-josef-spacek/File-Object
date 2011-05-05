@@ -45,7 +45,7 @@ sub new {
 	}
 
 	# Path initialization.
-	self->_init;
+	$self->_init;
 
 	# Object.
 	return $self;
@@ -184,6 +184,7 @@ sub _init {
 			$self->{'path'} = [splitdir($Bin)];
 		}
 	}
+	return;
 }
 
 1;
