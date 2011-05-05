@@ -109,7 +109,7 @@ sub get_file {
 }
 
 # Serialize path.
-sub serialize {
+sub s {
 	my $self = shift;
 	if ($self->{'type'} eq 'dir') {
 		return catdir(@{$self->{'path'}});
@@ -134,13 +134,13 @@ sub up {
 				$self->{'type'} = 'dir';
 				splice @{$self->{'path'}}, -2;
 			} else {
-				err 'Cannot go up.', 'PATH', $self->serialize;
+				err 'Cannot go up.', 'PATH', $self->s;
 			}
 		} else {
 			if (@{$self->{'path'}}) {
 				pop @{$self->{'path'}};
 			} else {
-				err 'Cannot go up.', 'PATH', $self->serialize;
+				err 'Cannot go up.', 'PATH', $self->s;
 			}
 		}
 	}
@@ -232,9 +232,9 @@ TODO
 
 TODO
 
-=item C<serialize()>
+=item C<s()>
 
-TODO
+ Serialize path and return.
 
 =item C<up($up_num)>
 
