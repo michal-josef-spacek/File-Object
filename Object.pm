@@ -44,21 +44,8 @@ sub new {
 		err '\'dir\' parameter must be a reference to array.';
 	}
 
-	# Path.
-	if ($self->{'type'} eq 'file') {
-		if ($self->{'file'}) {
-			$self->{'path'} = [@{$self->{'dir'}}, $self->{'file'}];
-		} else {
-			my $file_abs_path = rel2abs($Script);
-			$self->{'path'} = [splitdir($file_abs_path)];
-		}
-	} else {
-		if (@{$self->{'dir'}}) {
-			$self->{'path'} = $self->{'dir'};
-		} else {
-			$self->{'path'} = [splitdir($Bin)];
-		}
-	}
+	# Path initialization.
+	self->_init;
 
 	# Object.
 	return $self;
@@ -178,6 +165,25 @@ sub _file {
 		$self->{'type'} = 'file';
 	}
 	return;
+}
+
+# Initialization.
+sub _init {
+	my $self = shift;
+	if ($self->{'type'} eq 'file') {
+		if ($self->{'file'}) {
+			$self->{'path'} = [@{$self->{'dir'}}, $self->{'file'}];
+		} else {
+			my $file_abs_path = rel2abs($Script);
+			$self->{'path'} = [splitdir($file_abs_path)];
+		}
+	} else {
+		if (@{$self->{'dir'}}) {
+			$self->{'path'} = $self->{'dir'};
+		} else {
+			$self->{'path'} = [splitdir($Bin)];
+		}
+	}
 }
 
 1;
