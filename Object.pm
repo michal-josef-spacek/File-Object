@@ -21,7 +21,7 @@ sub new {
 	my $self = bless {}, $class;
 
 	# Dir path.
-	$self->{'dir'} = undef;
+	$self->{'dir'} = [];
 
 	# File path.
 	$self->{'file'} = undef;
@@ -39,17 +39,22 @@ sub new {
 		err 'Bad \'type\' parameter.';
 	}
 
+	# Check to dir.
+	if (ref $self->{'dir'} ne 'ARRAY') {
+		err '\'dir\' parameter must be a reference to array.';
+	}
+
 	# Path.
 	if ($self->{'type'} eq 'file') {
 		if ($self->{'file'}) {
-			$self->{'path'} = [splitdir($self->{'file'})];
+			$self->{'path'} = [@{$self->{'dir'}}, $self->{'file'}];
 		} else {
 			my $file_abs_path = rel2abs($Script);
 			$self->{'path'} = [splitdir($file_abs_path)];
 		}
 	} else {
-		if ($self->{'dir'}) {
-			$self->{'path'} = [splitdir($self->{'dir'})];
+		if (@{$self->{'dir'}}) {
+			$self->{'path'} = $self->{'dir'};
 		} else {
 			$self->{'path'} = [splitdir($Bin)];
 		}
@@ -76,12 +81,14 @@ sub dir {
 # Add file.
 sub file {
 	my ($self, @dirs_or_file) = @_;
+	my $file = pop @dirs_or_file;
 	# XXX is this right?
 	foreach my $dir (@dirs_or_file) {
 		if (defined $dir) {
 			$self->_dir($dir);
 		}
 	}
+	$self->_file($file);
 
 	# Object.
 	return $self;
@@ -162,12 +169,12 @@ sub _dir {
 
 # Add file array.
 sub _file {
-	my ($self, @file) = @_;
+	my ($self, $file) = @_;
 	if ($self->{'type'} eq 'file') {
 		pop @{$self->{'path'}};
-		push @{$self->{'path'}}, @file;
+		push @{$self->{'path'}}, $file;
 	} else {
-		push @{$self->{'path'}}, @file;
+		push @{$self->{'path'}}, $file;
 		$self->{'type'} = 'file';
 	}
 	return;
@@ -245,6 +252,7 @@ TODO
 =head1 ERRORS
 
  Mine:
+         'dir' parameter must be a reference to array.
          Bad 'type' parameter.
          Cannot go up.
                  PATH -> path;
