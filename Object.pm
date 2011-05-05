@@ -65,7 +65,7 @@ sub dir {
 
 	# Only if is $dir defined.
 	if (defined $dir) {
-		$self->_dir([$dir]);
+		$self->_dir($dir);
 	}
 
 	# Object.
@@ -83,7 +83,7 @@ sub dir_path {
 		my @parts = splitdir($dir_path);
 
 		# Add to path.
-		$self->_dir(\@parts);
+		$self->_dir(@parts);
 	}
 
 	# Object.
@@ -96,7 +96,7 @@ sub file {
 
 	# Only if is $file defined.
 	if (defined $file) {
-		$self->_file([$file]);
+		$self->_file($file);
 	}
 
 	# Object.
@@ -114,7 +114,7 @@ sub file_path {
 		my @file = splitdir($file_path);
 
 		# Add to path.
-		$self->_file(\@file);
+		$self->_file(@file);
 	}
 
 	# Object.
@@ -184,23 +184,23 @@ sub up {
 
 # Add dir array.
 sub _dir {
-	my ($self, $dir_ar) = @_;	
+	my ($self, @dir) = @_;	
 	if ($self->{'type'} eq 'file') {
 		$self->{'type'} = 'dir';
 		pop @{$self->{'path'}};
 	}
-	push @{$self->{'path'}}, @{$dir_ar};
+	push @{$self->{'path'}}, @dir;
 	return;
 }
 
 # Add file array.
 sub _file {
-	my ($self, $file_ar) = @_;
+	my ($self, @file) = @_;
 	if ($self->{'type'} eq 'file') {
 		pop @{$self->{'path'}};
-		push @{$self->{'path'}}, @{$file_ar};
+		push @{$self->{'path'}}, @file;
 	} else {
-		push @{$self->{'path'}}, @{$file_ar};
+		push @{$self->{'path'}}, @file;
 		$self->{'type'} = 'file';
 	}
 	return;
