@@ -36,7 +36,7 @@ sub new {
 	if (! $self->{'type'} || ($self->{'type'} ne 'file' 
 		&& $self->{'type'} ne 'dir')) {
 
-		err "Bad 'type' parameter.";
+		err 'Bad \'type\' parameter.';
 	}
 
 	# Path.
