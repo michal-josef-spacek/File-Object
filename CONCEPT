@@ -1,0 +1,19 @@
+CONCEPT
+=======
+Examples
+--------
+# Serialize actual directory path.
+print File::Object->new->s."\n";
+
+# Serialize file 'file' path.
+my $subdir = File::Object->new(
+	'dir' => ['dir', 'subdir'],
+);
+print $subdir->file('file')->s."\n";
+
+# Serialize file 'file1' and 'file2' path.
+my $subdir = File::Object->new(
+	'dir' => ['dir', 'subdir'],
+);
+print $subdir->file('file1')->s."\n";
+print $subdir->file('file2')->s."\n";
