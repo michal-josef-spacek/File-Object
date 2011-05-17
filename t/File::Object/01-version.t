@@ -1,3 +1,7 @@
+# Pragmas.
+use strict;
+use warnings;
+
 # Modules.
 use File::Object;
 use Test::More 'tests' => 1;
