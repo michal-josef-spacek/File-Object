@@ -1,7 +1,7 @@
 # Modules.
 use English qw(-no_match_vars);
 use File::Object;
-use Test::More 'tests' => 4;
+use Test::More 'tests' => 3;
 
 # Test.
 eval {
@@ -19,5 +19,4 @@ is($EVAL_ERROR, "Unknown parameter 'something'.\n");
 
 # Test.
 my $obj = File::Object->new;
-ok(defined $obj);
-ok($obj->isa('File::Object'));
+isa_ok($obj, 'File::Object');
