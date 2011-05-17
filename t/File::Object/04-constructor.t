@@ -4,21 +4,20 @@ use File::Object;
 use Test::More 'tests' => 4;
 
 # Test.
-my $obj;
 eval {
-	$obj = File::Object->new('');
+	File::Object->new('');
 };
 is($EVAL_ERROR, "Unknown parameter ''.\n");
 
 # Test.
 eval {
-	$obj = File::Object->new(
+	File::Object->new(
 		'something' => 'value',
 	);
 };
 is($EVAL_ERROR, "Unknown parameter 'something'.\n");
 
 # Test.
-$obj = File::Object->new;
+my $obj = File::Object->new;
 ok(defined $obj);
 ok($obj->isa('File::Object'));
