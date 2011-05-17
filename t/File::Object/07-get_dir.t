@@ -2,9 +2,6 @@
 use File::Object;
 use Test::More 'tests' => 2;
 
-# Debug message.
-print "Testing: get_dir() method.\n";
-
 # Test.
 my $obj = File::Object->new;
 my $ret = $obj->get_dir;

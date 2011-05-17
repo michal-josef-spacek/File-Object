@@ -3,9 +3,6 @@ use File::Object;
 use FindBin qw($Bin);
 use Test::More 'tests' => 2;
 
-# Debug message.
-print "Testing: s() method.\n";
-
 # Test.
 my $obj = File::Object->new;
 my $ret = $obj->s;

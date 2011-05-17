@@ -3,9 +3,6 @@ use English qw(-no_match_vars);
 use File::Object;
 use Test::More 'tests' => 4;
 
-# Debug message.
-print "Testing: new() constructor.\n";
-
 # Test.
 my $obj;
 eval {
