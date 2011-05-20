@@ -4,6 +4,9 @@ use ExtUtils::MakeMaker;
 # Definition.
 WriteMakefile(
 	'AUTHOR' => 'Michal Špaček <skim@cpan.org>',
+	'CONFIGURE_REQUIRES' => {
+		'ExtUtils::MakeMaker' => 0,
+	},
 	'NAME' => 'File::Object',
 	'PREREQ_PM' => {
 		'Class::Utils' => 0.01,
