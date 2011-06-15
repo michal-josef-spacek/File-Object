@@ -5,7 +5,7 @@ t/File::Object/00-use.t
 t/File::Object/01-version.t
 t/File::Object/02-pod_coverage.t
 t/File::Object/03-pod.t
-t/File::Object/04-constructor.t
+t/File::Object/04-new.t
 t/File::Object/05-dir.t
 t/File::Object/06-file.t
 t/File::Object/07-get_dir.t
