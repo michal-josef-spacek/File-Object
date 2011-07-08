@@ -274,10 +274,6 @@ L<Error::Pure(3pm)>,
 L<FindBin(3pm)>,
 L<File::Spec::Functions(3pm)>.
 
-=head1 SEE ALSO
-
- TODO
-
 =head1 AUTHOR
 
 Michal Špaček L<skim@cpan.org>
