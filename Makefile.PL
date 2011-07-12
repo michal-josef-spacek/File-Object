@@ -3,32 +3,31 @@ use strict;
 use warnings;
 
 # Modules.
-use ExtUtils::MakeMaker;
+use inc::Module::Install;
 
 # Definition.
-WriteMakefile(
-	'AUTHOR' => 'Michal Špaček <skim@cpan.org>',
-	'BUILD_REQUIRES' => {
-		'Cwd' => 0,
-		'English' => 0,
-		'File::Spec::Functions' => 0,
-		'FindBin' => 0,
-		'Test::More' => 0,
-		'Test::Pod' => 0,
-		'Test::Pod::Coverage' => 0,
-	},
-	'CONFIGURE_REQUIRES' => {
-		'ExtUtils::MakeMaker' => 0,
-	},
-	'NAME' => 'File::Object',
-	'PREREQ_PM' => {
-		'Class::Utils' => 0.01,
-		'Error::Pure' => 0.01,
-		'File::Spec::Functions' => 0,
-		'FindBin' => 0,
-	},
-	'VERSION' => 0.01,
-	'test' => {
-		'TESTS' => 't/File::Object/*.t',
-	},
-);
+abstract 'Object system for filesystem paths.';
+author 'Michal Špaček <skim@cpan.org>';
+license 'bsd';
+name 'File-Object';
+requires 'Class::Utils' => 0.01;
+requires 'Error::Pure' => 0.01;
+requires 'File::Spec::Functions' => 0;
+requires 'FindBin' => 0;
+resources 'repository' => {
+	'url' => 'git://github.com/tupinek/File-Object',
+	'web' => 'https://github.com/tupinek/File-Object',
+	'type' => 'git',
+};
+test_requires 'Cwd' => 0;
+test_requires 'English' => 0;
+test_requires 'File::Spec::Functions' => 0;
+test_requires 'FindBin' => 0;
+test_requires 'Test::More' => 0;
+test_requires 'Test::Pod' => 0;
+test_requires 'Test::Pod::Coverage' => 0;
+tests_recursive;
+version '0.01';
+
+# Run.
+WriteAll();
