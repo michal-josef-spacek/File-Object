@@ -197,7 +197,7 @@ __END__
 
 =head1 NAME
 
-File::Object - TODO
+File::Object - Object system for filesystem paths.
 
 =head1 SYNOPSIS
 
