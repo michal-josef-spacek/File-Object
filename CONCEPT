@@ -17,3 +17,10 @@ my $subdir = File::Object->new(
 );
 print $subdir->file('file1')->s."\n";
 print $subdir->file('file2')->s."\n";
+
+# Serialize directory 'dir1' and 'dir2' path.
+my $subdir = File::Object->new(
+	'dir' => ['dir', 'subdir'],
+);
+print $subdir->dir('dir1')->s."\n";
+print $subdir->dir('dir2')->s."\n";
