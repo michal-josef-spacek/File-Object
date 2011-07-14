@@ -274,6 +274,10 @@ L<Error::Pure(3pm)>,
 L<FindBin(3pm)>,
 L<File::Spec::Functions(3pm)>.
 
+=head1 REPOSITORY
+
+L<https://github.com/tupinek/File-Object>
+
 =head1 AUTHOR
 
  Michal Špaček L<mailto:skim@cpan.org>
