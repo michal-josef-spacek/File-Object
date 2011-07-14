@@ -4,7 +4,6 @@ TODO
 2. Dodelat dokumentaci.
 3. Slo by nejak zoptimalizovat kod? Se mi zda, ze v konstruktoru
    by slo volat nejakou pomocnou funkci.
-4. Nebylo by lepsi do file_path zadavat file_path('dir1', 'dir2', 'file')?
 5. Nefunguje situace:
    my $dir = File::Object->new;
    $dir->dir('dir1')->s
@@ -13,3 +12,6 @@ TODO
 
 Applied
 =======
+4. Nebylo by lepsi do file_path zadavat file_path('dir1', 'dir2', 'file')?
+Už není aktuální.
+NONE [20110714] skim
