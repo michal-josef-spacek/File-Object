@@ -5,7 +5,7 @@ use warnings;
 # Modules.
 use English qw(-no_match_vars);
 use File::Object;
-use Test::More 'tests' => 5;
+use Test::More 'tests' => 6;
 
 # Test.
 eval {
@@ -38,6 +38,14 @@ eval {
 };
 is($EVAL_ERROR, "'dir' parameter must be a reference to array.\n",
 	'Bad \'dir\' parameter.');
+
+# Test.
+eval {
+	File::Object->new(
+		'type' => undef,
+	);
+};
+is($EVAL_ERROR, "Bad 'type' parameter.\n", 'Bad undefined \'type\' parameter.');
 
 # Test.
 my $obj = File::Object->new;
