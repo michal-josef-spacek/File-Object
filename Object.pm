@@ -201,7 +201,14 @@ File::Object - Object system for filesystem paths.
 
 =head1 SYNOPSIS
 
- TODO
+ use File::Object;
+ my $obj = File::Object->new(%parameters);
+ $obj->dir($dir);
+ $obj->file($file);
+ my $dir = $obj->get_dir($dir_num);
+ my $file = $obj->get_file;
+ my $path = $obj->s;
+ $obj->up($num);
 
 =head1 METHODS
 
@@ -233,18 +240,23 @@ Constructor.
 =item C<dir(@dir)>
 
 TODO
+ Returns main object.
 
 =item C<file(@file)>
 
 TODO
+ Returns main object.
 
 =item C<get_dir($dir_num)>
 
-TODO
+ Returns $dir_num level directory.
+ Default value of $dir_num is 1.
 
 =item C<get_file()>
 
-TODO
+ Returns:
+ - Filename if object is file path.
+ - undef if object is directory path.
 
 =item C<s()>
 
@@ -253,6 +265,7 @@ TODO
 =item C<up($up_num)>
 
 TODO
+ Returns main object.
 
 =back
 
@@ -266,6 +279,30 @@ TODO
 
  From Class::Utils::set_params():
          Unknown parameter '%s'.
+
+=head1 EXAMPLE1
+
+ # Pragmas.
+ use strict;
+ use warnings;
+
+ # Modules.
+ use File::Object;
+
+ # Print actual directory path.
+ print File::Object->new->s."\n";
+
+=head1 EXAMPLE2
+
+ # Pragmas.
+ use strict;
+ use warnings;
+
+ # Modules.
+ use File::Object;
+
+ # Print parent directory path.
+ print File::Object->new->up->s."\n";
 
 =head1 DEPENDENCIES
 
