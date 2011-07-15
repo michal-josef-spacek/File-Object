@@ -68,11 +68,7 @@ sub dir {
 sub file {
 	my ($self, @dirs_or_file) = @_;
 	my $file = pop @dirs_or_file;
-	foreach my $dir (@dirs_or_file) {
-		if (defined $dir) {
-			$self->_dir($dir);
-		}
-	}
+	$self->dir(@dirs_or_file);
 	$self->_file($file);
 
 	# Object.
