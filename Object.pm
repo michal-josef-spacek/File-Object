@@ -139,6 +139,7 @@ sub up {
 		if ($self->{'type'} eq 'file') {
 			if (@{$self->{'path'}} > 1) {
 				$self->{'type'} = 'dir';
+				$self->{'file'} = undef;
 				splice @{$self->{'path'}}, -2;
 			} else {
 				err 'Cannot go up.', 'PATH', $self->s;
@@ -161,6 +162,7 @@ sub _dir {
 	my ($self, @dir) = @_;	
 	if ($self->{'type'} eq 'file') {
 		$self->{'type'} = 'dir';
+		$self->{'file'} = undef;
 		pop @{$self->{'path'}};
 	}
 	push @{$self->{'path'}}, @dir;
