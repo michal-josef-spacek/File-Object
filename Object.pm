@@ -54,7 +54,6 @@ sub new {
 # Add dir.
 sub dir {
 	my ($self, @dirs) = @_;
-	# XXX Is this right?
 	foreach my $dir (@dirs) {
 		if (defined $dir) {
 			$self->_dir($dir);
@@ -69,7 +68,6 @@ sub dir {
 sub file {
 	my ($self, @dirs_or_file) = @_;
 	my $file = pop @dirs_or_file;
-	# XXX is this right?
 	foreach my $dir (@dirs_or_file) {
 		if (defined $dir) {
 			$self->_dir($dir);
