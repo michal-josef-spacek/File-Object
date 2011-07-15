@@ -117,7 +117,7 @@ sub reset {
 			$self->{'path'} = [splitdir($Bin)];
 		}
 	}
-	return;
+	return $self;
 }
 
 # Serialize path.
@@ -306,6 +306,54 @@ TODO
 
  # Print parent directory path.
  print File::Object->new->up->s."\n";
+
+=head1 EXAMPLE3
+
+ # Pragmas.
+ use strict;
+ use warnings;
+
+ # Modules.
+ use File::Object;
+
+ # Object with directory path.
+ my $obj = File::Object->new(
+         'dir' => ['path', 'to', 'subdir'],
+ );
+
+ # Relative path to file1.
+ print $obj->file('file1')->s."\n";
+
+ # Relative path to file2.
+ print $obj->file('file2')->s."\n";
+
+ # Output:
+ # path/to/subdir/file1
+ # path/to/subdir/file2
+
+=head1 EXAMPLE4
+
+ # Pragmas.
+ use strict;
+ use warnings;
+
+ # Modules.
+ use File::Object;
+
+ # Object with directory path.
+ my $obj = File::Object->new(
+         'dir' => ['path', 'to', 'subdir'],
+ );
+
+ # Relative path to dir1.
+ print $obj->dir('dir1')->s."\n";
+
+ # Relative path to dir2.
+ print $obj->reset->dir('dir2')->s."\n";
+
+ # Output:
+ # path/to/subdir/dir1
+ # path/to/subdir/dir2
 
 =head1 DEPENDENCIES
 
