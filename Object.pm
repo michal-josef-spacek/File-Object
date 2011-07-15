@@ -130,7 +130,7 @@ sub up {
 	my ($self, $up_num) = @_;
 
 	# Check number and positive number.
-	if (! $up_num || $up_num !~ /^\d$/ || $up_num < 1) {
+	if (! $up_num || $up_num !~ m/^\d$/ms) {
 		$up_num = 1;
 	}
 
