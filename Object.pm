@@ -8,7 +8,7 @@ use warnings;
 use Class::Utils qw(set_params);
 use Error::Pure qw(err);
 use FindBin qw($Bin $Script);
-use File::Spec::Functions qw(catdir catfile rel2abs splitdir);
+use File::Spec::Functions qw(catdir catfile splitdir);
 
 # Version.
 our $VERSION = 0.01;
@@ -107,12 +107,11 @@ sub reset {
 		if ($self->{'file'}) {
 			$self->{'path'} = [@{$self->{'dir'}}, $self->{'file'}];
 		} else {
-			my $file_abs_path = rel2abs($Script);
-			$self->{'path'} = [splitdir($file_abs_path)];
+			$self->{'path'} = [splitdir($Bin), $Script];
 		}
 	} else {
 		if (@{$self->{'dir'}}) {
-			$self->{'path'} = $self->{'dir'};
+			$self->{'path'} = [@{$self->{'dir'}}];
 		} else {
 			$self->{'path'} = [splitdir($Bin)];
 		}
