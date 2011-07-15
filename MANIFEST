@@ -20,5 +20,5 @@ t/File-Object/05-dir.t
 t/File-Object/06-file.t
 t/File-Object/07-get_dir.t
 t/File-Object/08-get_file.t
-t/File-Object/09-s.t
-t/File-Object/10-up.t
+t/File-Object/10-s.t
+t/File-Object/11-up.t
