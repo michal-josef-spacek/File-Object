@@ -137,7 +137,7 @@ sub up {
 	# Process.
 	foreach (1 .. $up_num) {
 		if ($self->{'type'} eq 'file') {
-			if (@{$self->{'path'}} > 1) {
+			if (@{$self->{'path'}} > 2) {
 				$self->{'type'} = 'dir';
 				$self->{'file'} = undef;
 				splice @{$self->{'path'}}, -2;
