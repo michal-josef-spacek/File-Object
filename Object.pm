@@ -365,8 +365,9 @@ L<https://github.com/tupinek/File-Object>
 
 =head1 AUTHOR
 
- Michal Špaček L<mailto:skim@cpan.org>
- L<http://skim.cz>
+Michal Špaček L<mailto:skim@cpan.org>
+
+L<http://skim.cz>
 
 =head1 LICENSE AND COPYRIGHT
 
