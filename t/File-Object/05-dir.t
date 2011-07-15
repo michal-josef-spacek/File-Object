@@ -9,7 +9,7 @@ use Test::More 'tests' => 2;
 # Test.
 my $obj = File::Object->new;
 my $ret = $obj->dir;
-ok($ret->isa('File::Object'));
+isa_ok($ret, 'File::Object');
 
 # Test.
 $obj = File::Object->new(
