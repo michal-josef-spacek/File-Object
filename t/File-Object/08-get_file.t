@@ -9,7 +9,7 @@ use Test::More 'tests' => 2;
 # Test.
 my $obj = File::Object->new;
 my $ret = $obj->get_file;
-is($ret, undef);
+is($ret, undef, 'Undefined file.');
 
 # Test.
 $obj = File::Object->new(
@@ -18,4 +18,4 @@ $obj = File::Object->new(
 	'type' => 'file',
 );
 $ret = $obj->get_file;
-is($ret, 'ex1.txt');
+is($ret, 'ex1.txt', 'Regular file.');

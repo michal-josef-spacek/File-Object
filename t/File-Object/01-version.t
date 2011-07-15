@@ -7,4 +7,4 @@ use File::Object;
 use Test::More 'tests' => 1;
 
 # Test.
-is($File::Object::VERSION, '0.02');
+is($File::Object::VERSION, '0.02', 'Version.');
