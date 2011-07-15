@@ -235,12 +235,12 @@ Constructor.
 
 =item C<dir(@dir)>
 
-TODO
+ Add directory or directories to object.
  Returns main object.
 
 =item C<file(@file)>
 
-TODO
+ Add file or directory/directories with file to object.
  Returns main object.
 
 =item C<get_dir($dir_num)>
@@ -264,7 +264,7 @@ TODO
 
 =item C<up($up_num)>
 
-TODO
+ Go to $up_num upper directory. 
  Returns main object.
 
 =back
