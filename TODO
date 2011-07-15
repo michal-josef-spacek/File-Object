@@ -1,6 +1,5 @@
 TODO
 ====
-2. Dodelat dokumentaci.
 6.
 
 Applied
@@ -22,3 +21,6 @@ OK [20110715] skim
 3. Slo by nejak zoptimalizovat kod? Se mi zda, ze v konstruktoru
    by slo volat nejakou pomocnou funkci.
 NONE [20110715] skim
+
+2. Dodelat dokumentaci.
+OK [20110715] skim
