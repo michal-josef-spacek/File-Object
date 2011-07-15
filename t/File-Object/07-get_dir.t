@@ -4,11 +4,14 @@ use warnings;
 
 # Modules.
 use File::Object;
-use Test::More 'tests' => 2;
+use Test::More 'tests' => 3;
 
 # Test.
 my $obj = File::Object->new;
 is($obj->get_dir, 'File-Object', 'Directory of running script.');
+
+# Test.
+is($obj->get_dir(1), 'File-Object', 'Directory of running script.');
 
 # Test.
 $obj = File::Object->new(
