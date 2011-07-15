@@ -9,9 +9,7 @@ use Test::More 'tests' => 2;
 
 # Test.
 my $obj = File::Object->new;
-my $ret = $obj->s;
-my $rigth_ret = $Bin;
-is($ret, $rigth_ret);
+is($obj->s, $Bin);
 
 # Test.
 $obj = File::Object->new(
@@ -19,5 +17,4 @@ $obj = File::Object->new(
 	'file' => 'ex1.txt',
 	'type' => 'file',
 );
-$ret = $obj->s;
-is($ret, '1/2/3/ex1.txt');
+is($obj->s, '1/2/3/ex1.txt');
