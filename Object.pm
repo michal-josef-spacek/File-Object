@@ -44,8 +44,8 @@ sub new {
 		err '\'dir\' parameter must be a reference to array.';
 	}
 
-	# Path initialization.
-	$self->_init;
+	# Reset to constructor values.
+	$self->reset;
 
 	# Object.
 	return $self;
@@ -98,6 +98,26 @@ sub get_file {
 	} else {
 		return;	
 	}
+}
+
+# Reset.
+sub reset {
+	my $self = shift;
+	if ($self->{'type'} eq 'file') {
+		if ($self->{'file'}) {
+			$self->{'path'} = [@{$self->{'dir'}}, $self->{'file'}];
+		} else {
+			my $file_abs_path = rel2abs($Script);
+			$self->{'path'} = [splitdir($file_abs_path)];
+		}
+	} else {
+		if (@{$self->{'dir'}}) {
+			$self->{'path'} = $self->{'dir'};
+		} else {
+			$self->{'path'} = [splitdir($Bin)];
+		}
+	}
+	return;
 }
 
 # Serialize path.
@@ -165,26 +185,6 @@ sub _file {
 	return;
 }
 
-# Initialization.
-sub _init {
-	my $self = shift;
-	if ($self->{'type'} eq 'file') {
-		if ($self->{'file'}) {
-			$self->{'path'} = [@{$self->{'dir'}}, $self->{'file'}];
-		} else {
-			my $file_abs_path = rel2abs($Script);
-			$self->{'path'} = [splitdir($file_abs_path)];
-		}
-	} else {
-		if (@{$self->{'dir'}}) {
-			$self->{'path'} = $self->{'dir'};
-		} else {
-			$self->{'path'} = [splitdir($Bin)];
-		}
-	}
-	return;
-}
-
 1;
 
 __END__
@@ -205,6 +205,7 @@ File::Object - Object system for filesystem paths.
  $obj->file($file);
  my $dir = $obj->get_dir($dir_num);
  my $file = $obj->get_file;
+ $obj->reset;
  my $path = $obj->s;
  $obj->up($num);
 
@@ -255,6 +256,10 @@ TODO
  Returns:
  - Filename if object is file path.
  - undef if object is directory path.
+
+=item C<reset()>
+
+ Reset to constructor values.
 
 =item C<s()>
 

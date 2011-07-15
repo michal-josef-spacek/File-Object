@@ -23,4 +23,4 @@ my $subdir = File::Object->new(
 	'dir' => ['dir', 'subdir'],
 );
 print $subdir->dir('dir1')->s."\n";
-print $subdir->dir('dir2')->s."\n";
+print $subdir->reset->dir('dir2')->s."\n";
