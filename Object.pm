@@ -354,10 +354,10 @@ Constructor.
 
 =head1 DEPENDENCIES
 
-L<Class::Utils(3pm)>,
-L<Error::Pure(3pm)>,
-L<FindBin(3pm)>,
-L<File::Spec::Functions(3pm)>.
+L<Class::Utils>,
+L<Error::Pure>,
+L<FindBin>,
+L<File::Spec::Functions>.
 
 =head1 REPOSITORY
 
