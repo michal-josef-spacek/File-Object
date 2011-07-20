@@ -1,4 +1,4 @@
-0.02
+0.02 (July 20, 2011)
 - Rewrite 03-pod.t to better version for Perl 5.6.
 - Remove "(3pm)" from pod doc.
 - Fix tests for Windows (bad path in $FindBin::Bin).
