@@ -4,6 +4,7 @@ use warnings;
 
 # Modules.
 use File::Object;
+use File::Spec::Functions qw(catdir);
 use Test::More 'tests' => 2;
 
 # Test.
@@ -16,5 +17,6 @@ $obj = File::Object->new(
 	'dir' => ['dir'],
 	'type' => 'dir',
 );
-is($obj->dir('subdir', undef)->s, 'dir/subdir',
-	'Test for dir() with subdir and undef.');
+$ret = $obj->dir('subdir', undef)->s;
+my $right_ret = catdir('dir', 'subdir');
+is($ret, $right_ret, 'Test for dir() with subdir and undef.');

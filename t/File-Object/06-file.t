@@ -4,6 +4,7 @@ use warnings;
 
 # Modules.
 use File::Object;
+use File::Spec::Functions qw(catfile);
 use Test::More 'tests' => 2;
 
 # Test.
@@ -17,5 +18,6 @@ $obj = File::Object->new(
 	'dir' => ['dir'],
 	'type' => 'file',
 );
-is($obj->file('subdir', 'other_file')->s, 'dir/subdir/other_file',
-	'Test for file() with subdir and other_file.');
+$ret = $obj->file('subdir', 'other_file')->s;
+my $right_ret = catfile('dir', 'subdir', 'other_file');
+is($ret, $right_ret, 'Test for file() with subdir and other_file.');

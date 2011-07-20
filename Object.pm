@@ -325,8 +325,12 @@ Constructor.
  print $obj->file('file2')->s."\n";
 
  # Output:
+ # Unix:
  # path/to/subdir/file1
  # path/to/subdir/file2
+ # Windows:
+ # path\to\subdir\file1
+ # path\to\subdir\file2
 
 =head1 EXAMPLE4
 
@@ -349,8 +353,12 @@ Constructor.
  print $obj->reset->dir('dir2')->s."\n";
 
  # Output:
+ # Unix:
  # path/to/subdir/dir1
  # path/to/subdir/dir2
+ # Windows:
+ # path\to\subdir\dir1
+ # path\to\subdir\dir2
 
 =head1 DEPENDENCIES
 

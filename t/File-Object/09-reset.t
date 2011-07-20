@@ -4,7 +4,7 @@ use warnings;
 
 # Modules.
 use File::Object;
-use File::Spec::Functions qw(catdir catfile);
+use File::Spec::Functions qw(catdir catfile splitdir);
 use FindBin qw($Bin $Script);
 use Test::More 'tests' => 12;
 
@@ -12,11 +12,13 @@ use Test::More 'tests' => 12;
 my $obj = File::Object->new(
 	'type' => 'dir',
 );
-is($obj->s, $Bin, 'Directory of running directory.');
+my $right_ret1 = catdir(splitdir($Bin));
+is($obj->s, $right_ret1, 'Directory of running directory.');
 $obj->dir('subdir');
-is($obj->s, catdir($Bin, 'subdir'), 'Actual directory with subdirectory.');
+my $right_ret2 = catdir(splitdir($Bin), 'subdir');
+is($obj->s, $right_ret2, 'Actual directory with subdirectory.');
 $obj->reset;
-is($obj->s, $Bin, 'Directory of running script.');
+is($obj->s, $right_ret1, 'Directory of running script.');
 
 # Test.
 $obj = File::Object->new(
@@ -25,7 +27,7 @@ $obj = File::Object->new(
 );
 is($obj->s, 'dir1', 'Directory defined in constructor.');
 $obj->dir('dir2');
-is($obj->s, 'dir1/dir2', 'Directory with subdirectory.');
+is($obj->s, catdir('dir1', 'dir2'), 'Directory with subdirectory.');
 $obj->reset;
 is($obj->s, 'dir1', 'Directory defined in constructor.');
 
@@ -45,8 +47,8 @@ $obj = File::Object->new(
 	'file' => 'file',
 	'type' => 'file',
 );
-is($obj->s, 'dir/file', 'Path to file defined in constructor.');
+is($obj->s, catfile('dir', 'file'), 'Path to file defined in constructor.');
 $obj->file('other_file');
-is($obj->s, 'dir/other_file', 'Path to other file.');
+is($obj->s, catfile('dir', 'other_file'), 'Path to other file.');
 $obj->reset;
-is($obj->s, 'dir/file', 'Path to file defined in constructor.');
+is($obj->s, catfile('dir', 'file'), 'Path to file defined in constructor.');
