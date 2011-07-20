@@ -1,4 +1,5 @@
 0.03
+- Update README to File::Object man page.
 
 0.02 (July 20, 2011)
 - Rewrite 03-pod.t to better version for Perl 5.6.
