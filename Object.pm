@@ -217,6 +217,7 @@ File::Object - Object system for filesystem paths.
  my $file = $obj->get_file;
  $obj->reset;
  my $path = $obj->s;
+ $obj->set;
  $obj->up($num);
 
 =head1 METHODS
