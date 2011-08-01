@@ -1,4 +1,5 @@
 0.03
+- Add set() method.
 - Update README to File::Object man page.
 
 0.02 (July 20, 2011)

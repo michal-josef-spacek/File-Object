@@ -125,6 +125,19 @@ sub s {
 	}
 }
 
+# Set actual values to constructor values.
+sub set {
+	my $self = shift;
+	my @path = @{$self->{'path'}};
+	if ($self->{'type'} eq 'file') {
+		$self->{'file'} = pop @path;
+		$self->{'dir'} = \@path;
+	} else {
+		$self->{'dir'} = \@path;
+	}
+	return $self;
+}
+
 # Go to parent directory.
 sub up {
 	my ($self, $up_num) = @_;
@@ -261,6 +274,10 @@ Constructor.
 =item C<s()>
 
  Serialize path and return.
+
+=item C<set()>
+
+ Set actual values to constructor values.
 
 =item C<up($up_num)>
 
