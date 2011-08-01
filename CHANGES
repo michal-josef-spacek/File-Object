@@ -1,5 +1,6 @@
 0.03
 - Add set() method.
+- Rewrite 03-pod.t to better version for Perl 5.6. (again)
 - Update README to File::Object man page.
 
 0.02 (July 20, 2011)
