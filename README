@@ -10,6 +10,7 @@ SYNOPSIS
      my $file = $obj->get_file;
      $obj->reset;
      my $path = $obj->s;
+     $obj->set;
      $obj->up($num);
 
 METHODS
@@ -53,6 +54,9 @@ METHODS
 
     "s()"
              Serialize path and return.
+
+    "set()"
+             Set actual values to constructor values.
 
     "up($up_num)"
              Go to $up_num upper directory. 
