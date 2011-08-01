@@ -96,7 +96,7 @@ sub get_file {
 	}
 }
 
-# Reset.
+# Reset to constructor values.
 sub reset {
 	my $self = shift;
 	if ($self->{'type'} eq 'file') {
