@@ -1,6 +1,8 @@
 TODO
 ====
-6.
+6. Vyřešit problém interních proměnných 'file' a 'type', které by měly byt
+   dvoje. Aktuální a inicializační.
+7.
 
 Applied
 =======
