@@ -1,4 +1,5 @@
 0.04
+- Errors cleaning in 04-new.t test file.
 
 0.03 (August 1, 2011)
 - Add set() method.
