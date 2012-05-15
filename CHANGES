@@ -1,6 +1,7 @@
 0.04
 - Errors cleaning in 04-new.t test file.
 - Update build system to new version.
+- Add examples/ directory.
 
 0.03 (August 1, 2011)
 - Add set() method.
