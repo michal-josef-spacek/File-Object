@@ -11,7 +11,7 @@ author 'Michal Špaček <skim@cpan.org>';
 license 'bsd';
 name 'File-Object';
 requires 'Class::Utils' => 0.01;
-requires 'Error::Pure' => 0.01;
+requires 'Error::Pure' => 0.07;
 requires 'File::Spec::Functions' => 0;
 requires 'FindBin' => 0;
 resources 'repository' => {
