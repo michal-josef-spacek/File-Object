@@ -100,8 +100,13 @@ sub get_file {
 sub reset {
 	my $self = shift;
 	if ($self->{'type'} eq 'file') {
-		if ($self->{'dir'}) {
-			$self->{'path'} = [@{$self->{'dir'}}, $self->{'file'}];
+		if (@{$self->{'dir'}}) {
+			$self->{'path'} = [@{$self->{'dir'}}];
+			if (defined $self->{'file'}) {
+				push @{$self->{'path'}}, $self->{'file'};
+			}
+		} elsif (defined $self->{'file'}) {
+			$self->{'path'} = [$self->{'file'}];
 		} else {
 			$self->{'path'} = [splitdir($Bin), $Script];
 		}
