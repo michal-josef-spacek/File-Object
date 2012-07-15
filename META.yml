@@ -32,9 +32,8 @@ requires:
   File::Spec::Functions: 0
   FindBin: 0
 resources:
+  bugtracker: https://rt.cpan.org/Public/Dist/Display.html?Name=File-Object
+  homepage: https://github.com/tupinek/File-Object
   license: http://opensource.org/licenses/bsd-license.php
-  repository:
-    type: git
-    url: git://github.com/tupinek/File-Object
-    web: https://github.com/tupinek/File-Object
+  repository: git://github.com/tupinek/File-Object
 version: 0.04
