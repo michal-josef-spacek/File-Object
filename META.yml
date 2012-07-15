@@ -27,8 +27,8 @@ no_index:
     - inc
     - t
 requires:
-  Class::Utils: 0.01
-  Error::Pure: 0.07
+  Class::Utils: 0.03
+  Error::Pure: 0.08
   File::Spec::Functions: 0
   FindBin: 0
 resources:
