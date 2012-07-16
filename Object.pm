@@ -44,6 +44,13 @@ sub new {
 		err '\'dir\' parameter must be a reference to array.';
 	}
 
+	# Check to file.
+	if ($self->{'type'} eq 'file' && @{$self->{'dir'}}
+		&& ! defined $self->{'file'}) {
+
+		err 'Bad file constructor with undefined \'file\' parameter.';
+	}
+
 	# Reset to constructor values.
 	$self->reset;
 
@@ -100,13 +107,8 @@ sub get_file {
 sub reset {
 	my $self = shift;
 	if ($self->{'type'} eq 'file') {
-		if (@{$self->{'dir'}}) {
-			$self->{'path'} = [@{$self->{'dir'}}];
-			if (defined $self->{'file'}) {
-				push @{$self->{'path'}}, $self->{'file'};
-			}
-		} elsif (defined $self->{'file'}) {
-			$self->{'path'} = [$self->{'file'}];
+		if ($self->{'file'}) {
+			$self->{'path'} = [@{$self->{'dir'}}, $self->{'file'}];
 		} else {
 			$self->{'path'} = [splitdir($Bin), $Script];
 		}
@@ -297,6 +299,7 @@ Constructor.
  Mine:
          'dir' parameter must be a reference to array.
          Bad 'type' parameter.
+         Bad file constructor with undefined 'file' parameter.
          Cannot go up.
                  PATH -> path;
 

@@ -2,7 +2,6 @@ TODO
 ====
 6. Vyřešit problém interních proměnných 'file' a 'type', které by měly byt
    dvoje. Aktuální a inicializační.
-7. Doplnit testy (cover tests).
 8.
 
 Applied
@@ -27,3 +26,7 @@ NONE [20110715] skim
 
 2. Dodelat dokumentaci.
 OK [20110715] skim
+
+7. Doplnit testy (cover tests).
+Nakonec to nebylo ani o cover testech, ale spise o konceptu.
+OK [20110715] skimd

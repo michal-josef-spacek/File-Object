@@ -3,10 +3,12 @@ use strict;
 use warnings;
 
 # Modules.
+use English qw(-no_match_vars);
+use Error::Pure::Utils qw(clean);
 use File::Object;
 use File::Spec::Functions qw(catdir catfile splitdir);
 use FindBin qw($Bin $Script);
-use Test::More 'tests' => 12;
+use Test::More 'tests' => 13;
 
 # Test.
 my $obj = File::Object->new(
@@ -40,6 +42,18 @@ $obj->file('other_file');
 is($obj->s, catfile($Bin, 'other_file'), 'Other file in actual directory.');
 $obj->reset;
 is($obj->s, catfile($Bin, $Script), 'Running file.');
+
+# Test.
+eval {
+	File::Object->new(
+		'dir' => ['dir'],
+		'file' => undef,
+		'type' => 'file',
+	);
+};
+is($EVAL_ERROR, "Bad file constructor with undefined 'file' parameter.\n",
+	'Bad \'File::Object\' file constructor.');
+clean();
 
 # Test.
 $obj = File::Object->new(

@@ -1,4 +1,6 @@
 0.05
+- Better check for file instance. Add error. Simplify code. Add new situation
+  to tests.
 
 0.04 (July 16, 2012)
 - Errors cleaning in 04-new.t test file.
