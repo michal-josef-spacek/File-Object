@@ -66,6 +66,7 @@ ERRORS
      Mine:
              'dir' parameter must be a reference to array.
              Bad 'type' parameter.
+             Bad file constructor with undefined 'file' parameter.
              Cannot go up.
                      PATH -> path;
 
