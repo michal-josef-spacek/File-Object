@@ -1,4 +1,5 @@
 0.06
+- Improve doc (add default values for constructor parameters).
 
 0.05 (July 16, 2012)
 - Better check for file instance. Add error. Simplify code. Add new situation

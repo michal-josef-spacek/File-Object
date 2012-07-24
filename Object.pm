@@ -20,7 +20,7 @@ sub new {
 	# Create object.
 	my $self = bless {}, $class;
 
-	# Dir path.
+	# Directory path.
 	$self->{'dir'} = [];
 
 	# File path.
@@ -239,11 +239,13 @@ Constructor.
 
 =item * C<dir>
 
- Directory path.
+ Directory path in reference to array.
+ Default value is [].
 
 =item * C<file>
 
  File path.
+ Default value is undef.
 
 =item * C<type>
 
@@ -251,6 +253,7 @@ Constructor.
  Types:
  - file
  - dir
+ Default value is 'dir'.
 
 =back
 
