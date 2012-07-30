@@ -7,8 +7,8 @@ use warnings;
 # Modules.
 use Class::Utils qw(set_params);
 use Error::Pure qw(err);
-use FindBin qw($Bin $Script);
 use File::Spec::Functions qw(catdir catfile splitdir);
+use FindBin qw($Bin $Script);
 
 # Version.
 our $VERSION = 0.06;
