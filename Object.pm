@@ -321,6 +321,9 @@ Constructor.
  # Print actual directory path.
  print File::Object->new->s."\n";
 
+ # Output which runs from /usr/local/bin:
+ # /usr/local/bin
+
 =head1 EXAMPLE2
 
  # Pragmas.
@@ -332,6 +335,9 @@ Constructor.
 
  # Print parent directory path.
  print File::Object->new->up->s."\n";
+
+ # Output which runs from /usr/local/bin:
+ # /usr/local
 
 =head1 EXAMPLE3
 
