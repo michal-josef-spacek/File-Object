@@ -299,15 +299,16 @@ Constructor.
 
 =head1 ERRORS
 
- Mine:
+ new():
          'dir' parameter must be a reference to array.
          Bad 'type' parameter.
          Bad file constructor with undefined 'file' parameter.
+         From Class::Utils::set_params():
+                 Unknown parameter '%s'.
+
+ up():
          Cannot go up.
                  PATH -> path;
-
- From Class::Utils::set_params():
-         Unknown parameter '%s'.
 
 =head1 EXAMPLE1
 
