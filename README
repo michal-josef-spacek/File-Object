@@ -19,11 +19,13 @@ METHODS
 
             *       "dir"
 
-                     Directory path.
+                     Directory path in reference to array.
+                     Default value is [].
 
             *       "file"
 
                      File path.
+                     Default value is undef.
 
             *       "type"
 
@@ -31,6 +33,7 @@ METHODS
                      Types:
                      - file
                      - dir
+                     Default value is 'dir'.
 
     "dir(@dir)"
              Add directory or directories to object.
@@ -63,15 +66,16 @@ METHODS
              Returns main object.
 
 ERRORS
-     Mine:
+     new():
              'dir' parameter must be a reference to array.
              Bad 'type' parameter.
              Bad file constructor with undefined 'file' parameter.
+             From Class::Utils::set_params():
+                     Unknown parameter '%s'.
+
+     up():
              Cannot go up.
                      PATH -> path;
-
-     From Class::Utils::set_params():
-             Unknown parameter '%s'.
 
 EXAMPLE1
      # Pragmas.
@@ -84,6 +88,9 @@ EXAMPLE1
      # Print actual directory path.
      print File::Object->new->s."\n";
 
+     # Output which runs from /usr/local/bin:
+     # /usr/local/bin
+
 EXAMPLE2
      # Pragmas.
      use strict;
@@ -94,6 +101,9 @@ EXAMPLE2
 
      # Print parent directory path.
      print File::Object->new->up->s."\n";
+
+     # Output which runs from /usr/local/bin:
+     # /usr/local
 
 EXAMPLE3
      # Pragmas.
