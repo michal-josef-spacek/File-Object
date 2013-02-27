@@ -6,7 +6,8 @@ use warnings;
 use File::Object;
 use File::Spec::Functions qw(catdir catfile splitdir);
 use FindBin qw($Bin);
-use Test::More 'tests' => 2;
+use Test::More 'tests' => 3;
+use Test::NoWarnings;
 
 # Test.
 my $obj = File::Object->new;

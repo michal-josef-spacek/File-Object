@@ -8,7 +8,8 @@ use Error::Pure::Utils qw(clean);
 use File::Object;
 use File::Spec::Functions qw(catdir catfile splitdir);
 use FindBin qw($Bin $Script);
-use Test::More 'tests' => 13;
+use Test::More 'tests' => 14;
+use Test::NoWarnings;
 
 # Test.
 my $obj = File::Object->new(

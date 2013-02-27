@@ -5,7 +5,8 @@ use warnings;
 # Modules.
 use File::Object;
 use File::Spec::Functions qw(catdir catfile);
-use Test::More 'tests' => 8;
+use Test::More 'tests' => 9;
+use Test::NoWarnings;
 
 # Test.
 my $obj = File::Object->new(

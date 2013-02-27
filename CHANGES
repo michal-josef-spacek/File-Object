@@ -1,4 +1,5 @@
 0.06
+- Add Test::NoWarnings to tests.
 - Improve doc (add default values for constructor parameters).
 - Improve doc (ERRORS section).
 

@@ -5,7 +5,8 @@ use warnings;
 # Modules.
 use English qw(-no_match_vars);
 use File::Object;
-use Test::More 'tests' => 13;
+use Test::More 'tests' => 14;
+use Test::NoWarnings;
 
 # Test.
 my $obj = File::Object->new;
