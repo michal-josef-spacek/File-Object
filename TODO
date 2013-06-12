@@ -2,7 +2,8 @@ TODO
 ====
 6. Vyřešit problém interních proměnných 'file' a 'type', které by měly byt
    dvoje. Aktuální a inicializační.
-8.
+8. Pridat SIGNATURE file.
+9.
 
 Applied
 =======
