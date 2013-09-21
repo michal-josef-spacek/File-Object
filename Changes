@@ -1,5 +1,6 @@
-0.06
+0.06 2013-09-21
  - Add LICENSE file.
+ - Add SIGNATURE file.
  - Add Test::NoWarnings to tests.
  - Improve doc (add default values for constructor parameters).
  - Improve doc (ERRORS section).

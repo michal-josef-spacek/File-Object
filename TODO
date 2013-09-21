@@ -2,7 +2,6 @@ TODO
 ====
 6. Vyřešit problém interních proměnných 'file' a 'type', které by měly byt
    dvoje. Aktuální a inicializační.
-8. Pridat SIGNATURE file.
 9.
 
 Applied
@@ -30,4 +29,7 @@ OK [20110715] skim
 
 7. Doplnit testy (cover tests).
 Nakonec to nebylo ani o cover testech, ale spise o konceptu.
-OK [20110715] skimd
+OK [20110715] skim
+
+8. Pridat SIGNATURE file.
+OK [20130921] skim

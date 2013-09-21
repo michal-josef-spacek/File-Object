@@ -17,6 +17,7 @@ MANIFEST			This list of files
 META.yml
 Object.pm
 README
+SIGNATURE
 t/File-Object/00-use.t
 t/File-Object/01-version.t
 t/File-Object/02-pod_coverage.t
