@@ -1,29 +1,30 @@
 0.06
-- Add LICENSE file.
-- Add Test::NoWarnings to tests.
-- Improve doc (add default values for constructor parameters).
-- Improve doc (ERRORS section).
-- Rename CHANGES to Changes.
+ - Add LICENSE file.
+ - Add Test::NoWarnings to tests.
+ - Improve doc (add default values for constructor parameters).
+ - Improve doc (ERRORS section).
+ - Rename CHANGES to Changes.
+ - Rewrite Changes file to CPAN::Changes::SPEC format.
 
-0.05 (July 16, 2012)
-- Better check for file instance. Add error. Simplify code. Add new situation
-  to tests.
+0.05 2012-07-16
+ - Better check for file instance. Add error. Simplify code. Add new
+   situation to tests.
 
-0.04 (July 16, 2012)
-- Errors cleaning in 04-new.t test file.
-- Update build system to new version.
-- Add examples/ directory.
-- Fix Makefile.PL to META 1.4.
+0.04 2012-07-16
+ - Errors cleaning in 04-new.t test file.
+ - Update build system to new version.
+ - Add examples/ directory.
+ - Fix Makefile.PL to META 1.4.
 
-0.03 (August 1, 2011)
-- Add set() method.
-- Rewrite 03-pod.t to better version for Perl 5.6. (again)
-- Update README to File::Object man page.
+0.03 2011-08-01
+ - Add set() method.
+ - Rewrite 03-pod.t to better version for Perl 5.6. (again)
+ - Update README to File::Object man page.
 
-0.02 (July 20, 2011)
-- Rewrite 03-pod.t to better version for Perl 5.6.
-- Remove "(3pm)" from pod doc.
-- Fix tests for Windows (bad path in $FindBin::Bin).
+0.02 2011-07-20
+ - Rewrite 03-pod.t to better version for Perl 5.6.
+ - Remove "(3pm)" from pod doc.
+ - Fix tests for Windows (bad path in $FindBin::Bin).
 
-0.01 (July 15, 2011)
-- First version.
+0.01 2011-07-15
+ - First version.
