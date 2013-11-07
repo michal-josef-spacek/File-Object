@@ -62,7 +62,7 @@ METHODS
              Set actual values to constructor values.
 
     "up($up_num)"
-             Go to $up_num upper directory. 
+             Go to $up_num upper directory.
              Returns main object.
 
 ERRORS
