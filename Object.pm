@@ -11,7 +11,7 @@ use File::Spec::Functions qw(catdir catfile splitdir);
 use FindBin qw($Bin $Script);
 
 # Version.
-our $VERSION = 0.07;
+our $VERSION = 0.08;
 
 # Constructor.
 sub new {
@@ -419,6 +419,6 @@ BSD license.
 
 =head1 VERSION
 
-0.07
+0.08
 
 =cut
