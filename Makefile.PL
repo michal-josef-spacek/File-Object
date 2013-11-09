@@ -10,6 +10,7 @@ abstract 'Object system for filesystem paths.';
 author 'Michal Špaček <skim@cpan.org>';
 license 'bsd';
 name 'File-Object';
+readme_from 'Object.pm';
 requires 'Class::Utils' => 0.03;
 requires 'Error::Pure' => 0.11;
 requires 'File::Spec::Functions' => 0;
