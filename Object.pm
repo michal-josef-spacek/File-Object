@@ -52,7 +52,7 @@ sub new {
 	}
 
 	# Remove undef dirs.
-	if (defined $self->{'dir'}) {
+	if (@{$self->{'dir'}}) {
 		my @dir = map { defined $_ ? $_ : () } @{$self->{'dir'}};
 		$self->{'dir'} = \@dir;
 	}
