@@ -77,8 +77,6 @@ sub file {
 	my $file = pop @dirs_or_file;
 	$self->dir(@dirs_or_file);
 	$self->_file($file);
-
-	# Object.
 	return $self;
 }
 
