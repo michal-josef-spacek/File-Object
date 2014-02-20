@@ -1,4 +1,4 @@
-0.08
+0.08 2014-02-20
  - Add 'readme_from' directive to Makefile.PL.
  - Add tests for file() method.
  - Add tests for new() method.
