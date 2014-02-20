@@ -1,5 +1,6 @@
 0.08
  - Add 'readme_from' directive to Makefile.PL.
+ - Add tests for file() method.
  - Fix test dependencies to reality.
  - Update dependency to Error::Pure 0.16.
 
