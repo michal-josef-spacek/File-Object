@@ -5,6 +5,7 @@
  - Add tests for reset() method.
  - Fix test dependencies to reality.
  - Fix reset() method.
+ - Improve constructor to remove undef values in dir structure.
  - Rewrite internals to better saving of set()/reset() stay.
  - Update dependency to Error::Pure 0.16.
 
