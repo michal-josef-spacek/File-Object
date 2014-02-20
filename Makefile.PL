@@ -12,7 +12,7 @@ license 'bsd';
 name 'File-Object';
 readme_from 'Object.pm';
 requires 'Class::Utils' => 0.03;
-requires 'Error::Pure' => 0.11;
+requires 'Error::Pure' => 0.16;
 requires 'File::Spec::Functions' => 0;
 requires 'FindBin' => 0;
 requires 'perl' => '5.6.2';
