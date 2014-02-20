@@ -2,7 +2,10 @@ TODO
 ====
 6. Vyřešit problém interních proměnných 'file' a 'type', které by měly byt
    dvoje. Aktuální a inicializační.
-9.
+9. Bylo by dobre prepsat reset() na nejakou inteligentni formu.
+10. Bylo by dobre dopsat testy pro reset() tak, aby se resetovalo ze vsech do
+    vsech stavu.
+11.
 
 Applied
 =======
