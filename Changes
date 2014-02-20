@@ -1,6 +1,7 @@
 0.08
  - Add 'readme_from' directive to Makefile.PL.
  - Add tests for file() method.
+ - Add tests for new() method.
  - Add tests for reset() method.
  - Fix test dependencies to reality.
  - Fix reset() method.
