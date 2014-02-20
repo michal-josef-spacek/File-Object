@@ -8,7 +8,7 @@ use Error::Pure::Utils qw(clean);
 use File::Object;
 use File::Spec::Functions qw(catdir catfile splitdir);
 use FindBin qw($Bin $Script);
-use Test::More 'tests' => 17;
+use Test::More 'tests' => 18;
 use Test::NoWarnings;
 
 # Test.
@@ -44,6 +44,8 @@ $obj->file('file1');
 is($obj->s, catdir('dir1', 'file1'), 'Directory with file.');
 $obj->reset;
 is($obj->s, 'dir1', 'Directory defined in constructor.');
+$obj->file('file1');
+is($obj->s, catdir('dir1', 'file1'), 'Directory with file after reset.');
 
 # Test.
 $obj = File::Object->new(

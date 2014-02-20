@@ -112,6 +112,9 @@ sub reset {
 				@{$self->{'dir'}},
 				defined $self->{'file'} ? $self->{'file'} : (),
 			];
+			if (! defined $self->{'file'}) {
+				$self->{'type'} = 'dir';
+			}
 		} else {
 			$self->{'path'} = [splitdir($Bin), $Script];
 		}
