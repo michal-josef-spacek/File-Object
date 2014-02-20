@@ -110,7 +110,7 @@ sub reset {
 		if (@{$self->{'dir'}} || $self->{'file'}) {
 			$self->{'path'} = [
 				@{$self->{'dir'}},
-				$self->{'file'} ? $self->{'file'} : (),
+				defined $self->{'file'} ? $self->{'file'} : (),
 			];
 		} else {
 			$self->{'path'} = [splitdir($Bin), $Script];
