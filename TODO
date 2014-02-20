@@ -1,8 +1,5 @@
 TODO
 ====
-6. Vyřešit problém interních proměnných 'file' a 'type', které by měly byt
-   dvoje. Aktuální a inicializační.
-9. Bylo by dobre prepsat reset() na nejakou inteligentni formu.
 10. Bylo by dobre dopsat testy pro reset() tak, aby se resetovalo ze vsech do
     vsech stavu.
 11.
@@ -36,3 +33,10 @@ OK [20110715] skim
 
 8. Pridat SIGNATURE file.
 OK [20130921] skim
+
+6. Vyřešit problém interních proměnných 'file' a 'type', které by měly byt
+   dvoje. Aktuální a inicializační.
+OK [20140220] skim
+
+9. Bylo by dobre prepsat reset() na nejakou inteligentni formu.
+OK [20140220] skim
