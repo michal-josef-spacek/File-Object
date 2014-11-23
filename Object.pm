@@ -82,9 +82,9 @@ sub dir {
 
 # Add file.
 sub file {
-	my ($self, @dirs_or_file) = @_;
-	my $file = pop @dirs_or_file;
-	$self->dir(@dirs_or_file);
+	my ($self, @file_path) = @_;
+	my $file = pop @file_path;
+	$self->dir(@file_path);
 	$self->_file($file);
 	return $self;
 }
@@ -245,8 +245,8 @@ File::Object - Object system for filesystem paths.
 
  use File::Object;
  my $obj = File::Object->new(%parameters);
- $obj->dir($dir);
- $obj->file($file);
+ $obj->dir(@dir);
+ $obj->file(@file_path);
  my $dir = $obj->get_dir($dir_num);
  my $file = $obj->get_file;
  $obj->reset;
@@ -289,7 +289,7 @@ Constructor.
  Add directory or directories to object.
  Returns main object.
 
-=item C<file(@file)>
+=item C<file(@file_path)>
 
  Add file or directory/directories with file to object.
  Returns main object.
