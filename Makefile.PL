@@ -7,7 +7,7 @@ use inc::Module::Install;
 
 # Definition.
 abstract 'Object system for filesystem paths.';
-author 'Michal Špaček <skim@cpan.org>';
+author 'Michal Spacek <skim@cpan.org>';
 license 'bsd';
 name 'File-Object';
 readme_from 'Object.pm';
