@@ -3,6 +3,7 @@
  - Fix concept of arguments of dir() and file() methods in code and doc.
  - Update LICENSE AND COPYRIGHT section in doc to my standard.
  - Update Module::Install to 1.16 version.
+ - Update copyright years.
 
 0.08 2014-02-20
  - Add 'readme_from' directive to Makefile.PL.
