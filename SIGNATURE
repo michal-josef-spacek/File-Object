@@ -1,5 +1,5 @@
 This file contains message digests of all files listed in MANIFEST,
-signed via the Module::Signature module, version 0.70.
+signed via the Module::Signature module, version 0.79.
 
 To verify the content in this distribution, first make sure you have
 Module::Signature installed, then type:
@@ -14,47 +14,49 @@ not run its Makefile.PL or Build.PL.
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-SHA1 66728241aadb156eb20726d29d2ad8125367baef Changes
-SHA1 cf7c63b0d816a8481d18a96201d462d2125ceccc LICENSE
-SHA1 f45750ffa49400d6b32b2ea8f8fd3f990ebf4930 MANIFEST
-SHA1 94b15216b781f827f6f2607500e448be87d282a0 META.yml
-SHA1 b967d4b9b95842a064180250f301cf11fd356890 Makefile.PL
-SHA1 22f193bb5a6bc871c36ebd7e7935827652314119 Object.pm
-SHA1 75ef2c7d1521f6f70cbfc454329e044093586e94 README
+SHA1 d413cd3a0251c0dd6d2108bd7f77f620343f3841 Changes
+SHA1 b7ceae89cdd78850407f39eeb346505c22908f4b LICENSE
+SHA1 3f1918732e1f3b3a73519e0d59707be454e1607a MANIFEST
+SHA1 711c21ca857b652410ce7800c1ed1e105ffde408 META.yml
+SHA1 7ad12a343767d2ee39ad8a4097d59bb45c741d9d Makefile.PL
+SHA1 1052ac7ab0f9d6a39e569b8bc5643c074e459199 Object.pm
+SHA1 808c0fe6f397eccc0e5e6eccc46c104a1731f9ac README
 SHA1 98ca92d0bbbb546b1f09402b0b7435bf3328228b examples/ex1.pl
 SHA1 578279eb9c67da9b7c5fc21f393729d24c4712a1 examples/ex2.pl
 SHA1 c91964a42745154b1e8da75a69082509d5cf232a examples/ex3.pl
 SHA1 664608c2f26d6fda0cf68be8a5a4500764a56d15 examples/ex4.pl
-SHA1 8a924add836b60fb23b25c8506d45945e02f42f4 inc/Module/Install.pm
-SHA1 2d0fad3bf255f8c1e7e1e34eafccc4f595603ddc inc/Module/Install/Base.pm
-SHA1 f0e01fff7d73cd145fbf22331579918d4628ddb0 inc/Module/Install/Can.pm
-SHA1 7328966e4fda0c8451a6d3850704da0b84ac1540 inc/Module/Install/Fetch.pm
-SHA1 b62ca5e2d58fa66766ccf4d64574f9e1a2250b34 inc/Module/Install/Makefile.pm
-SHA1 1aa925be410bb3bfcd84a16985921f66073cc1d2 inc/Module/Install/Metadata.pm
+SHA1 bce3c51bb369419603298064b78e14077b93af66 inc/Module/Install.pm
+SHA1 5c1a9d3a384a5262cbc105ab76d446047904c7fa inc/Module/Install/AuthorRequires.pm
+SHA1 d001b4b9a48395a8c4134b234a0e1789138427c5 inc/Module/Install/AuthorTests.pm
+SHA1 fe220f215f645500ce8f14ff5e19d9a28692af56 inc/Module/Install/Base.pm
+SHA1 b56ed8e42c600e08007d152cf0b1438a7c3b7f6e inc/Module/Install/Can.pm
+SHA1 99c531a17a67ce5250df2ae151cc48c80d914cde inc/Module/Install/Fetch.pm
+SHA1 76efdca3603159e0ae0e18f19fe72a0211a69529 inc/Module/Install/Makefile.pm
+SHA1 2e33e87882d60db3913da6284dd5295e5315e18a inc/Module/Install/Metadata.pm
 SHA1 79f5b4199f622e8b05aac266b0c39f6a85bb303f inc/Module/Install/ReadmeFromPod.pm
-SHA1 e4196994fa75e98bdfa2be0bdeeffef66de88171 inc/Module/Install/Win32.pm
-SHA1 c3a6d0d5b84feb3280622e9599e86247d58b0d18 inc/Module/Install/WriteAll.pm
-SHA1 dee57362ed03f0a741737f485f179a6b8f8242b6 t/File-Object/00-use.t
-SHA1 5a5dc951fc25ace9208ca170a1066fb66aacca0c t/File-Object/01-version.t
-SHA1 8f0f10bf12802ec0f2f6188313c61732e1dbc821 t/File-Object/02-pod_coverage.t
-SHA1 f39456a00ea96d0c7bf97225dc28cfad102bf94d t/File-Object/03-pod.t
-SHA1 58c74bb684180cccc51a62b77c95ec9b4d92c378 t/File-Object/04-new.t
-SHA1 9f95ce5a6cf81d02d56dbb9c38fec3cbf36fe466 t/File-Object/05-dir.t
-SHA1 7b206a844189828c7b87fa40202058cb22fc6e83 t/File-Object/06-file.t
-SHA1 b1943e616fb0dee7eae2581e68a53fb7be7e3413 t/File-Object/07-get_dir.t
-SHA1 6743a61bcf577c93cf7196048e59fce1a65d4c9b t/File-Object/08-get_file.t
-SHA1 cb874295c1240da9c4ca9ba486bd62ac9c1460cf t/File-Object/09-reset.t
-SHA1 2d2fce41b106949c98abcb40eb7f3e224bb0d014 t/File-Object/10-s.t
-SHA1 63ab2c95a8c655e8b27b7bdb07d130e8fdb5546e t/File-Object/11-set.t
-SHA1 963f4b22a4a8c0ba890b2cc96018e18c281aeb51 t/File-Object/12-up.t
+SHA1 c830b819e61bda5eca077c6291293bba61b3b9f2 inc/Module/Install/Win32.pm
+SHA1 cb52b9d6f88d512d448a6f35ed0af0d1201a134b inc/Module/Install/WriteAll.pm
+SHA1 dee57362ed03f0a741737f485f179a6b8f8242b6 t/File-Object/01-use.t
+SHA1 cd929ef1aa40477ed95416d17141f06fa47da7f7 t/File-Object/02-version.t
+SHA1 8a2901dfee943c14ad3c0bbda3956a25c6e993f4 t/File-Object/03-new.t
+SHA1 9f95ce5a6cf81d02d56dbb9c38fec3cbf36fe466 t/File-Object/04-dir.t
+SHA1 7b206a844189828c7b87fa40202058cb22fc6e83 t/File-Object/05-file.t
+SHA1 b1943e616fb0dee7eae2581e68a53fb7be7e3413 t/File-Object/06-get_dir.t
+SHA1 6743a61bcf577c93cf7196048e59fce1a65d4c9b t/File-Object/07-get_file.t
+SHA1 cb874295c1240da9c4ca9ba486bd62ac9c1460cf t/File-Object/08-reset.t
+SHA1 2d2fce41b106949c98abcb40eb7f3e224bb0d014 t/File-Object/09-s.t
+SHA1 63ab2c95a8c655e8b27b7bdb07d130e8fdb5546e t/File-Object/10-set.t
+SHA1 963f4b22a4a8c0ba890b2cc96018e18c281aeb51 t/File-Object/11-up.t
+SHA1 8f0f10bf12802ec0f2f6188313c61732e1dbc821 xt/File-Object/01-pod_coverage.t
+SHA1 f39456a00ea96d0c7bf97225dc28cfad102bf94d xt/File-Object/02-pod.t
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.12 (GNU/Linux)
+Version: GnuPG v1
 
-iQEcBAEBAgAGBQJTBjwjAAoJEAwa+cf4dLBaLkEIAIEOqTdbYYpsPIizfH0mnU1D
-1Ys5ZfxxuE36X5LE1iDL9jFcYhIXsMo5QY4UIiugLe8edxeSrcTM8bUUQAKlOZvt
-bai5LVgbjmHEv729EyJd2RuOIX8QXcZg3HxnEwh9Dx11rklF9WQcVw56pHHoECwb
-j0wu8Hg5rkjzdfBC5NX9AQ1jOFUWEsClKdVr4OwH813+eVpVNm2S/fhujwAB/fm8
-TkIYh7Y18KRqeLcz+e3oTaDcv1pPnwaY591jX866BRw0PT6WhOkEYpR0JIIprOo2
-Rf7Bs5Pm5Wi4T1j/S2Wva0IGlE/eWJOdFZ4lONjz9kiXC0kBKq9YaUSfBpT3tAQ=
-=Uy8H
+iQEbBAEBAgAGBQJWCQcVAAoJEJe+XXKaIuTlddIH92LXxiuEfnOodXQ5nBA+FHAy
+B1YxuW2+RS9mHTwCUjgaGGraSwC2mlk/tR7Z3Ym3vRcQcbb2yQuaY5myVWgYH8LM
+rUGys1xIztyP9keGlxumbDN820dUjF1I3FVm6N4DrJnzYiYvkP6ZiihbCsiW9z8/
+TuvBXnW86XAyXGrLYO47Q0Y7R3N3VX5JwCYSddRe5dWUkjbmpvbadK1fJqRpB0EI
+olFTbiGMfSA9c54QYtX7ivPkhEGxKJrMTL1f2Ijf+utb2pr3+RFyeURsoJU9U9KN
+JudhTyY0bCnmi+bFDViMB+waiLJjFIInlXSlUm4B1VMvPM21BD9Wle6OKiM7FA==
+=3hpR
 -----END PGP SIGNATURE-----
