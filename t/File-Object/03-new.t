@@ -125,7 +125,7 @@ is_deeply(
 	[
 		't',
 		'File-Object',
-		'04-new.t',
+		'03-new.t',
 	],
 	'Test for path in situation with implicit file.',
 );

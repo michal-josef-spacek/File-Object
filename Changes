@@ -2,6 +2,7 @@
  - Fix LICENSE file.
  - Fix concept of arguments of dir() and file() methods in code and doc.
  - Improve LICENSE AND COPYRIGHT section in doc.
+ - Move author tests to xt/ directory.
  - Update Module::Install to 1.16 version.
  - Update copyright years.
 
