@@ -1,7 +1,7 @@
 0.09
  - Fix LICENSE file.
  - Fix concept of arguments of dir() and file() methods in code and doc.
- - Update LICENSE AND COPYRIGHT section in doc to my standard.
+ - Improve LICENSE AND COPYRIGHT section in doc.
  - Update Module::Install to 1.16 version.
  - Update copyright years.
 
