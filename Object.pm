@@ -430,6 +430,16 @@ L<Error::Pure>,
 L<FindBin>,
 L<File::Spec::Functions>.
 
+=head1 SEE ALSO
+
+=over
+
+=item L<File::Spec>
+
+portably perform operations on file names
+
+=back
+
 =head1 REPOSITORY
 
 L<https://github.com/tupinek/File-Object>

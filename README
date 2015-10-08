@@ -162,6 +162,10 @@ EXAMPLE4
 DEPENDENCIES
     Class::Utils, Error::Pure, FindBin, File::Spec::Functions.
 
+SEE ALSO
+    File::Spec
+        portably perform operations on file names
+
 REPOSITORY
     <https://github.com/tupinek/File-Object>
 
