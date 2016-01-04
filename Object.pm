@@ -438,6 +438,10 @@ L<File::Spec::Functions>.
 
 portably perform operations on file names
 
+=item L<Path::Class>
+
+Cross-platform path specification manipulation
+
 =back
 
 =head1 REPOSITORY
