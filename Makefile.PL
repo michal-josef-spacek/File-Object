@@ -8,7 +8,7 @@ use inc::Module::Install;
 
 # Definition.
 abstract 'Object system for filesystem paths.';
-author 'Michal Spacek <skim@cpan.org>';
+author 'Michal Josef Spacek <skim@cpan.org>';
 author_requires 'English' => 0;
 author_requires 'Test::More' => 0;
 author_requires 'Test::NoWarnings' => 0;
