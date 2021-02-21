@@ -3,6 +3,7 @@ NAME
 
 SYNOPSIS
      use File::Object;
+
      my $obj = File::Object->new(%parameters);
      $obj->dir(@dir);
      $obj->file(@file_path);

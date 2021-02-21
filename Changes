@@ -1,6 +1,7 @@
 0.12
  - Fix bugtracker.
  - Improve LICENSE AND COPYRIGHT section in doc.
+ - Improve SYNOPSIS section in doc.
  - Update Module::Install to 1.19 version.
  - Update copyright years.
 

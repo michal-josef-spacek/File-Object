@@ -241,6 +241,7 @@ File::Object - Object system for filesystem paths.
 =head1 SYNOPSIS
 
  use File::Object;
+
  my $obj = File::Object->new(%parameters);
  $obj->dir(@dir);
  $obj->file(@file_path);
