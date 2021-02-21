@@ -243,22 +243,24 @@ File::Object - Object system for filesystem paths.
  use File::Object;
 
  my $obj = File::Object->new(%parameters);
- $obj->dir(@dir);
- $obj->file(@file_path);
+ my $self = $obj->dir(@dir);
+ my $self = $obj->file(@file_path);
  my $dir = $obj->get_dir($dir_num);
  my $file = $obj->get_file;
- $obj->reset;
+ my $self = $obj->reset;
  my $path = $obj->s;
- $obj->set;
- $obj->up($num);
+ my $self = $obj->set;
+ my $self = $obj->up($num);
 
 =head1 METHODS
 
-=over 8
+=head2 C<new>
 
-=item C<new(%parameters)>
+ my $obj = File::Object->new(%parameters);
 
 Constructor.
+
+Returns instance of object.
 
 =over 8
 
@@ -282,45 +284,70 @@ Constructor.
 
 =back
 
-=item C<dir(@dir)>
+=head2 C<dir>
 
- Add directory or directories to object.
- Returns main object.
+ my $self = $obj->dir(@dir);
 
-=item C<file(@file_path)>
+Add directory or directories to object.
 
- Add file or directory/directories with file to object.
- Returns main object.
+Returns instance of object.
 
-=item C<get_dir($dir_num)>
+=head2 C<file>
 
- Returns $dir_num level directory.
- Default value of $dir_num is 1.
+ my $self = $obj->file(@file_path);
 
-=item C<get_file()>
+Add file or directory/directories with file to object.
 
- Returns:
+Returns instance of object.
+
+=head2 C<get_dir>
+
+ my $dir = $obj->get_dir($dir_num);
+
+Default value of C<$dir_num> is 1.
+
+Returns C<$dir_num> level directory.
+
+=head2 C<get_file>
+
+ my $file = $obj->get_file;
+
+Returns:
+
  - Filename if object is file path.
  - undef if object is directory path.
 
-=item C<reset()>
+=head2 C<reset>
 
- Reset to constructor values.
+ my $self = $obj->reset;
 
-=item C<s()>
+Reset to constructor values.
 
- Serialize path and return.
+Returns instance of object.
 
-=item C<set()>
+=head2 C<s>
 
- Set actual values to constructor values.
+ my $path = $obj->s;
 
-=item C<up($up_num)>
+Serialize path and return.
 
- Go to $up_num upper directory.
- Returns main object.
+Returns string.
 
-=back
+=head2 C<set>
+
+ my $self = $obj->set;
+
+Set actual values to constructor values.
+
+Returns instance of object.
+
+=head2 C<up>
+
+ my $self = $obj->up($num);
+
+Go to $up_num upper directory.
+
+Returns instance of object.
 
 =head1 ERRORS
 

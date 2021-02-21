@@ -2,6 +2,7 @@
  - Fix bugtracker.
  - Improve LICENSE AND COPYRIGHT section in doc.
  - Improve SYNOPSIS section in doc.
+ - Rewrite POD to use =head2 in METHODS section.
  - Update Module::Install to 1.19 version.
  - Update copyright years.
 

@@ -5,66 +5,97 @@ SYNOPSIS
      use File::Object;
 
      my $obj = File::Object->new(%parameters);
-     $obj->dir(@dir);
-     $obj->file(@file_path);
+     my $self = $obj->dir(@dir);
+     my $self = $obj->file(@file_path);
      my $dir = $obj->get_dir($dir_num);
      my $file = $obj->get_file;
-     $obj->reset;
+     my $self = $obj->reset;
      my $path = $obj->s;
-     $obj->set;
-     $obj->up($num);
+     my $self = $obj->set;
+     my $self = $obj->up($num);
 
 METHODS
-    "new(%parameters)"
-            Constructor.
+  "new"
+     my $obj = File::Object->new(%parameters);
 
-            *       "dir"
+    Constructor.
 
-                     Directory path in reference to array.
-                     Default value is [].
+    Returns instance of object.
 
-            *       "file"
+    *       "dir"
 
-                     File path.
-                     Default value is undef.
+             Directory path in reference to array.
+             Default value is [].
 
-            *       "type"
+    *       "file"
 
-                     Type of path.
-                     Types:
-                     - file
-                     - dir
-                     Default value is 'dir'.
+             File path.
+             Default value is undef.
 
-    "dir(@dir)"
-             Add directory or directories to object.
-             Returns main object.
+    *       "type"
 
-    "file(@file_path)"
-             Add file or directory/directories with file to object.
-             Returns main object.
+             Type of path.
+             Types:
+             - file
+             - dir
+             Default value is 'dir'.
 
-    "get_dir($dir_num)"
-             Returns $dir_num level directory.
-             Default value of $dir_num is 1.
+  "dir"
+     my $self = $obj->dir(@dir);
 
-    "get_file()"
-             Returns:
-             - Filename if object is file path.
-             - undef if object is directory path.
+    Add directory or directories to object.
 
-    "reset()"
-             Reset to constructor values.
+    Returns instance of object.
 
-    "s()"
-             Serialize path and return.
+  "file"
+     my $self = $obj->file(@file_path);
 
-    "set()"
-             Set actual values to constructor values.
+    Add file or directory/directories with file to object.
 
-    "up($up_num)"
-             Go to $up_num upper directory.
-             Returns main object.
+    Returns instance of object.
+
+  "get_dir"
+     my $dir = $obj->get_dir($dir_num);
+
+    Default value of $dir_num is 1.
+
+    Returns $dir_num level directory.
+
+  "get_file"
+     my $file = $obj->get_file;
+
+    Returns:
+
+     - Filename if object is file path.
+     - undef if object is directory path.
+
+  "reset"
+     my $self = $obj->reset;
+
+    Reset to constructor values.
+
+    Returns instance of object.
+
+  "s"
+     my $path = $obj->s;
+
+    Serialize path and return.
+
+    Returns string.
+
+  "set"
+     my $self = $obj->set;
+
+    Set actual values to constructor values.
+
+    Returns instance of object.
+
+  "up"
+     my $self = $obj->up($num);
+
+    Go to $up_num upper directory.
+
+    Returns instance of object.
 
 ERRORS
      new():
