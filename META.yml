@@ -33,7 +33,7 @@ requires:
   FindBin: 0
   perl: 5.6.2
 resources:
-  bugtracker: https://rt.cpan.org/Public/Dist/Display.html?Name=File-Object
+  bugtracker: https://github.com/tupinek/File-Object/issues
   homepage: https://github.com/tupinek/File-Object
   license: http://opensource.org/licenses/bsd-license.php
   repository: git://github.com/tupinek/File-Object
