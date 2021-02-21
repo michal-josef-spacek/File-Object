@@ -67,6 +67,7 @@ sub new {
 # Add dir.
 sub dir {
 	my ($self, @dirs) = @_;
+
 	foreach my $dir (@dirs) {
 		if (defined $dir) {
 			$self->_dir($dir);
@@ -80,9 +81,11 @@ sub dir {
 # Add file.
 sub file {
 	my ($self, @file_path) = @_;
+
 	my $file = pop @file_path;
 	$self->dir(@file_path);
 	$self->_file($file);
+
 	return $self;
 }
 
@@ -90,16 +93,19 @@ sub file {
 # Get dir.
 sub get_dir {
 	my ($self, $dir_num) = @_;
+
 	$dir_num ||= 1;
 	if ($self->{'type'} eq 'file') {
 		$dir_num++;
 	}
+
 	return $self->{'path'}->[-$dir_num];
 }
 
 # Get file.
 sub get_file {
 	my $self = shift;
+
 	if ($self->{'type'} eq 'file') {
 		return $self->{'path'}->[-1];
 	} else {
@@ -125,6 +131,7 @@ sub reset {
 # Serialize path.
 sub s {
 	my $self = shift;
+
 	if ($self->{'type'} eq 'dir') {
 		return catdir(@{$self->{'path'}});
 	} else {
@@ -135,6 +142,7 @@ sub s {
 # Set actual values to constructor values.
 sub set {
 	my $self = shift;
+
 	my @path = @{$self->{'path'}};
 	$self->{'_set'}->{'type'} = $self->{'type'};
 	if ($self->{'type'} eq 'file') {
@@ -143,6 +151,7 @@ sub set {
 	} else {
 		$self->{'_set'}->{'dir'} = \@path;
 	}
+
 	return $self;
 }
 
@@ -181,18 +190,21 @@ sub up {
 # Add dir array.
 sub _dir {
 	my ($self, @dir) = @_;
+
 	if ($self->{'type'} eq 'file') {
 		$self->{'type'} = 'dir';
 		$self->{'file'} = undef;
 		pop @{$self->{'path'}};
 	}
 	push @{$self->{'path'}}, @dir;
+
 	return;
 }
 
 # Add file array.
 sub _file {
 	my ($self, $file) = @_;
+
 	if (! defined $file) {
 		return;
 	}
@@ -203,12 +215,14 @@ sub _file {
 		push @{$self->{'path'}}, $file;
 		$self->{'type'} = 'file';
 	}
+
 	return;
 }
 
 # Update path.
 sub _update_path {
 	my $self = shift;
+
 	if ($self->{'type'} eq 'file') {
 		$self->{'path'} = [
 			@{$self->{'dir'}},
@@ -223,6 +237,7 @@ sub _update_path {
 			$self->{'path'} = [splitdir($Bin)];
 		}
 	}
+
 	return;
 }
 
