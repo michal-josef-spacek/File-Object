@@ -281,21 +281,25 @@ Returns instance of object.
 
 =item * C<dir>
 
- Directory path in reference to array.
- Default value is [].
+Directory path in reference to array.
+
+Default value is [].
 
 =item * C<file>
 
- File path.
- Default value is undef.
+File path.
+
+Default value is undef.
 
 =item * C<type>
 
- Type of path.
- Types:
+Type of path.
+Types:
+
  - file
  - dir
- Default value is 'dir'.
+
+Default value is 'dir'.
 
 =back
 

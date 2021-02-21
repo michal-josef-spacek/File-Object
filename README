@@ -24,21 +24,24 @@ METHODS
 
     *       "dir"
 
-             Directory path in reference to array.
-             Default value is [].
+            Directory path in reference to array.
+
+            Default value is [].
 
     *       "file"
 
-             File path.
-             Default value is undef.
+            File path.
+
+            Default value is undef.
 
     *       "type"
 
-             Type of path.
-             Types:
+            Type of path. Types:
+
              - file
              - dir
-             Default value is 'dir'.
+
+            Default value is 'dir'.
 
   "dir"
      my $self = $obj->dir(@dir);
