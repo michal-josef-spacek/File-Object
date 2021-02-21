@@ -1,16 +1,13 @@
 package File::Object;
 
-# Pragmas.
 use strict;
 use warnings;
 
-# Modules.
 use Class::Utils qw(set_params);
 use Error::Pure qw(err);
 use File::Spec::Functions qw(catdir catfile splitdir);
 use FindBin qw($Bin $Script);
 
-# Version.
 our $VERSION = 0.12;
 
 # Constructor.
@@ -339,11 +336,9 @@ Constructor.
 
 =head1 EXAMPLE1
 
- # Pragmas.
  use strict;
  use warnings;
 
- # Modules.
  use File::Object;
 
  # Print actual directory path.
@@ -354,11 +349,9 @@ Constructor.
 
 =head1 EXAMPLE2
 
- # Pragmas.
  use strict;
  use warnings;
 
- # Modules.
  use File::Object;
 
  # Print parent directory path.
@@ -369,11 +362,9 @@ Constructor.
 
 =head1 EXAMPLE3
 
- # Pragmas.
  use strict;
  use warnings;
 
- # Modules.
  use File::Object;
 
  # Object with directory path.
@@ -397,11 +388,9 @@ Constructor.
 
 =head1 EXAMPLE4
 
- # Pragmas.
  use strict;
  use warnings;
 
- # Modules.
  use File::Object;
 
  # Object with directory path.
