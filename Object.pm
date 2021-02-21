@@ -463,7 +463,7 @@ Cross-platform path specification manipulation
 
 =head1 REPOSITORY
 
-L<https://github.com/tupinek/File-Object>
+L<https://github.com/michal-josef-spacek/File-Object>
 
 =head1 AUTHOR
 
