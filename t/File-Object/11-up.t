@@ -2,9 +2,13 @@ use strict;
 use warnings;
 
 use English qw(-no_match_vars);
+use Error::Pure::Utils qw(clean);
 use File::Object;
 use Test::More 'tests' => 14;
 use Test::NoWarnings;
+
+# Default Error::Pure module to use.
+$ENV{'ERROR_PURE_TYPE'} = 'AllError';
 
 # Test.
 my $obj = File::Object->new;
@@ -61,3 +65,4 @@ eval {
 	$obj->up;
 };
 is($EVAL_ERROR, "Cannot go up.\n", 'Cannot go to upper directory.');
+clean();

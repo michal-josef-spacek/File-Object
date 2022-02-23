@@ -1,4 +1,5 @@
 0.14
+ - Fix default Error::Pure module, which is used for error in tests.
 
 0.13 2021-02-21T10:59:26+01:00
  - Add blank lines after arguments and before return.
