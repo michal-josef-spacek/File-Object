@@ -7,9 +7,6 @@ use File::Object;
 use Test::More 'tests' => 12;
 use Test::NoWarnings;
 
-# Default Error::Pure module to use.
-$ENV{'ERROR_PURE_TYPE'} = 'AllError';
-
 # Test.
 eval {
 	File::Object->new('');

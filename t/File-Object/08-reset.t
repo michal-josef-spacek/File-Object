@@ -9,9 +9,6 @@ use FindBin qw($Bin $Script);
 use Test::More 'tests' => 18;
 use Test::NoWarnings;
 
-# Default Error::Pure module to use.
-$ENV{'ERROR_PURE_TYPE'} = 'AllError';
-
 # Test.
 my $obj = File::Object->new(
 	'type' => 'dir',
