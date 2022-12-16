@@ -371,7 +371,7 @@ Returns instance of object.
 
  my $self = $obj->up($num);
 
-Go to $up_num upper directory.
+Go to upper directory/ies defined by C<$num> count. Default value is one.
 
 Returns instance of object.
 

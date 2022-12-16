@@ -2,6 +2,7 @@
  - Add DESCRIPTION section to doc.
  - Add Path::Tiny to SEE ALSO section in doc.
  - Fix new() doc.
+ - Improve doc for up() method.
 
 0.16 2022-12-16T09:02:39+01:00
  - Fix minimal dependencies for Error::Pure and Class::Utils (because of
