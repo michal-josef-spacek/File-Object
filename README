@@ -196,6 +196,9 @@ SEE ALSO
     Path::Class
         Cross-platform path specification manipulation
 
+    Path::Tiny
+        File path utility
+
 REPOSITORY
     <https://github.com/michal-josef-spacek/File-Object>
 

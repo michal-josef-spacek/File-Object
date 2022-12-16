@@ -486,6 +486,10 @@ portably perform operations on file names
 
 Cross-platform path specification manipulation
 
+=item L<Path::Tiny>
+
+File path utility
+
 =back
 
 =head1 REPOSITORY
