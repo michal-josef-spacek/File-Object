@@ -280,7 +280,7 @@ actual, parent or explicit directory and relative paths to them.
 
 Constructor.
 
-Returns instance of object.
+Constructor parameters are:
 
 =over 8
 
@@ -307,6 +307,8 @@ Types:
 Default value is 'dir'.
 
 =back
+
+Returns instance of object.
 
 =head2 C<dir>
 

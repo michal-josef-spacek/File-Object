@@ -24,7 +24,7 @@ METHODS
 
     Constructor.
 
-    Returns instance of object.
+    Constructor parameters are:
 
     *       "dir"
 
@@ -46,6 +46,8 @@ METHODS
              - dir
 
             Default value is 'dir'.
+
+    Returns instance of object.
 
   "dir"
      my $self = $obj->dir(@dir);
