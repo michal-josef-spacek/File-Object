@@ -1,4 +1,5 @@
 0.17
+ - Add DESCRIPTION section to doc.
  - Add Path::Tiny to SEE ALSO section in doc.
 
 0.16 2022-12-16T09:02:39+01:00

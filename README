@@ -14,6 +14,10 @@ SYNOPSIS
      my $self = $obj->set;
      my $self = $obj->up($num);
 
+DESCRIPTION
+    This provides an object oriented interface to file/directory paths, such
+    as actual, parent or explicit directory and relative paths to them.
+
 METHODS
   "new"
      my $obj = File::Object->new(%parameters);

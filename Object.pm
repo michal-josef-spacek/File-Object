@@ -267,6 +267,11 @@ File::Object - Object system for filesystem paths.
  my $self = $obj->set;
  my $self = $obj->up($num);
 
+=head1 DESCRIPTION
+
+This provides an object oriented interface to file/directory paths, such as
+actual, parent or explicit directory and relative paths to them.
+
 =head1 METHODS
 
 =head2 C<new>
