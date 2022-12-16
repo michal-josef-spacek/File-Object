@@ -1,4 +1,5 @@
 0.16
+ - Improve LICENSE AND COPYRIGHT section in doc.
 
 0.15 2022-02-24T00:33:56+01:00
  - Fix default Error::Pure module via fix in Error::Pure.
