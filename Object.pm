@@ -383,6 +383,8 @@ Returns instance of object.
 
 =head1 EXAMPLE1
 
+=for comment filename=actual_directory.pl
+
  use strict;
  use warnings;
 
@@ -396,6 +398,8 @@ Returns instance of object.
 
 =head1 EXAMPLE2
 
+=for comment filename=parent_directory.pl
+
  use strict;
  use warnings;
 
@@ -408,6 +412,8 @@ Returns instance of object.
  # /usr/local
 
 =head1 EXAMPLE3
+
+=for comment filename=relative_file_path_to_defined_dir.pl
 
  use strict;
  use warnings;
@@ -434,6 +440,8 @@ Returns instance of object.
  # path\to\subdir\file2
 
 =head1 EXAMPLE4
+
+=for comment filename=relative_dir_path_to_defined_dir.pl
 
  use strict;
  use warnings;

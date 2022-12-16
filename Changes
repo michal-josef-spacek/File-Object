@@ -2,6 +2,7 @@
  - Fix minimal dependencies for Error::Pure and Class::Utils (because of
    List::MoreUtils)
  - Improve LICENSE AND COPYRIGHT section in doc.
+ - Rename example files to better name.
 
 0.15 2022-02-24T00:33:56+01:00
  - Fix default Error::Pure module via fix in Error::Pure.
