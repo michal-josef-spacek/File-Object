@@ -485,6 +485,10 @@ L<File::Spec::Functions>.
 
 =over
 
+=item L<File::Fu>
+
+file and directory objects
+
 =item L<File::Spec>
 
 portably perform operations on file names

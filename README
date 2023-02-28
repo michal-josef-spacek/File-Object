@@ -196,6 +196,9 @@ DEPENDENCIES
     Class::Utils, Error::Pure, FindBin, File::Spec::Functions.
 
 SEE ALSO
+    File::Fu
+        file and directory objects
+
     File::Spec
         portably perform operations on file names
 
