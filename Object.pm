@@ -493,6 +493,10 @@ file and directory objects
 
 portably perform operations on file names
 
+=item L<IO::All>
+
+IO::All to Larry Wall!
+
 =item L<Path::Class>
 
 Cross-platform path specification manipulation

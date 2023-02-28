@@ -202,6 +202,9 @@ SEE ALSO
     File::Spec
         portably perform operations on file names
 
+    IO::All
+        IO::All to Larry Wall!
+
     Path::Class
         Cross-platform path specification manipulation
 

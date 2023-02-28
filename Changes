@@ -1,5 +1,6 @@
 0.18
  - Add File::Fu to SEE ALSO section in doc.
+ - Add IO::All to SEE ALSO section in doc.
  - Update copyright years.
 
 0.17 2022-12-16T11:23:38+01:00
