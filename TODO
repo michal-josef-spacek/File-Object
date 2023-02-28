@@ -1,7 +1,7 @@
 TODO
 ====
-10. Bylo by dobre dopsat testy pro reset() tak, aby se resetovalo ze vsech do
-    vsech stavu.
+10. It would be good to add tests for reset() so that it resets from all
+    to all states.
 12.
 
 Applied
